@@ -1,0 +1,1251 @@
+:root {
+  --primary: rgb(127, 218, 9);
+  --for2: #333;
+  --for: black;
+  --for1: #212121;
+  --background: #fff;
+  --bg1: #e0e0e0;
+  --mid: #808080;
+  --for:#000000;
+  --poppins: "Poppins", sans-serif;
+  --cormo: "Cormorant Garamond", serif;
+}
+
+html {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+
+a,
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+
+.higher {
+  position: relative;
+  z-index: 10;
+}
+p {
+  font-family: var(--poppins);
+}
+H3 {
+  font-family: var(--poppins);
+}
+
+.title {
+  font-family: var(--poppins);
+  font-weight: 100;
+  font-size: 3vw;
+  letter-spacing: 2px;
+}
+.subtitle {
+  font-family: var(--poppins);
+
+}
+
+section {
+  position: relative;
+  padding: 20vh 10vw 12vh 10vw;
+}
+
+.heading {
+  font-family: var(--cormo);
+  font-size: 20vh;
+  font-style: italic;
+  color: var(--bg1);
+  position: absolute;
+  white-space: nowrap;
+  z-index: -1;
+  top: 5vh;
+  right: 10vw;
+}
+
+.subhead {
+  font-family: var(--poppins);
+  font-size: 4vh;
+  color: var(--for);
+
+  text-align: center;
+  margin: 60px 0 60px 0;
+}
+
+button {
+  height: 6vh;
+  background-color: white;
+  width: 20vw;
+  color: #333;
+  font-size: 16px;
+  font-weight: 900;
+  border-radius: 0;
+  border: 2px solid #333;
+  justify-items: center;
+  text-align: center;
+  font-family: var(--poppins);
+}
+
+.buttondark {
+  color: #fff;
+  border: 2px solid #fff;
+  color: #fff;
+  background-color: #333;
+  justify-items: center;
+  text-align: center;
+  vertical-align: center;
+  align-items: center;
+  display: inline-block;
+}
+
+.buttondark:hover{
+  color:#333;
+  background-color: #fff;
+}
+button:hover
+{
+background-color: var(--for2);
+color:var(--background);
+transition: .2s;
+
+}.button:hover {
+  background-color: var(--primary);
+  transition: 0.2s ease-in;
+}
+
+// Hero
+#hero {
+  height: 100vh;
+  width: 100%;
+  background-color: var(--for1);
+  padding: 0px;
+
+  #logo {
+    font-family: var(--poppins);
+    font-weight: 900;
+    font-size: 3vw;
+    color: white;
+    padding: 20px;
+  }
+  .heromenu {
+    position: absolute;
+    font-family: var(--poppins);
+    font-weight: 900;
+    font-size: 1 rem;
+    color: white;
+    letter-spacing: 3px;
+
+    #resume:hover {
+      color: var(--primary);
+      transform: scale(1.5);
+    }
+  }
+  #resume {
+    top: 20px;
+    right: 20px;
+  }
+  #Work {
+    position: absolute;
+    top: 51vh;
+    left: 0px;
+    transform: rotate(90deg);
+  }
+  #scrolltext {
+    bottom: 20px;
+    text-align: end;
+    right: 50px;
+    font-size: 12px;
+    font-weight: 50;
+    color: var(--bg1);
+  }
+  #scroll {
+    position: absolute;
+    right: 20px;
+    bottom: 0px;
+    height: 200px;
+    width: 2px;
+    background-color: var(--mid);
+  }
+  #scroll2 {
+    left: 30px;
+    bottom: 20px;
+    height: 200px;
+    width: 2px;
+    background-color: var(--primary);
+    animation: scroller 2s infinite ease-in-out;
+  }
+
+  @keyframes scroller {
+    0% {
+      height: 0px;
+      transform: translateY();
+    }
+    40% {
+      height: 200px;
+      transform: translateY(0px);
+    }
+    60% {
+      height: 200px;
+      transform: translateY(0px);
+    }
+    100% {
+      height: 0px;
+      transform: translateY(200px);
+    }
+  }
+  /*
+  @keyframes scroller {
+    0%{
+    height: 0px; 
+    transform: translateY();   
+    }
+    50%{
+      height: 200px;
+      transform: translateY(0px);
+    }
+    80%{
+      height: 50px;
+      transform: translateY(150px);
+    }
+    100%{
+      height: 0px;
+      transform: translateY(200px);
+    }
+  }
+
+  @keyframes scroller {
+    from{
+    transform: translateY();    
+
+    }
+    to{
+      transform: translateY(150px);
+    }
+  }
+  */
+
+  #About {
+    position: absolute;
+    top: 49vh;
+    right: -20px;
+    transform: rotate(-90deg);
+  }
+
+  #contact {
+    position: absolute;
+    bottom: 20px;
+    left: 46%;
+  }
+}
+// WHO
+#who {
+  height: auto;
+  background-color: var(--background);
+  position: relative;
+  .heading {
+    z-index: 1;
+  }
+  H1 {
+    top: 5vh;
+    right: 10vw;
+  }
+
+  #mydp {
+    background-color: var(--for1);
+    background-image: url(/Assets/img/me_bg.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
+#what {
+  height: auto;
+  width: auto;
+  position: relative;
+  background-color: var(--for2);
+  h1 {
+    color: var(--for);
+  }
+  h2 {
+    text-align: center;
+    color: var(--background);
+  }
+
+  text-align: center;
+}
+
+#skills {
+  min-height: 800px;
+  position: relative;
+  H2 {
+    display: block;
+    position: normal;
+  }
+}
+#skill {
+  width: 100%;
+  height: 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-auto-rows: auto;
+  grid-gap: 20px;
+}
+.skill {
+  position: relative;
+  height: 12vh;
+  width: auto;
+  align-self: center;
+  text-align: start;
+
+  H3 {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 2vw;
+    margin: 30px 0 30px 0px;
+  }
+  .skillhide {
+    position: absolute;
+    height: 10px;
+    width: 100%;
+    bottom: 0px;
+    background-color: var(--bg1);
+  }
+
+  .skillhover {
+    height: 10px;
+    width: 70%;
+    bottom: 0px;
+    background-color: var(--primary);
+  }
+}
+
+#softwares {
+  padding-top: 0px;
+  padding-bottom: 0px;
+
+  #sketch {
+    background-image: url(/Assets/img/software-logo/sketch.png);
+  }
+  #figma {
+    background-image: url(/Assets/img/software-logo/Figma.png);
+  }
+  #invision {
+    background-image: url(/Assets/img/software-logo/invision.png);
+  }
+  #XD {
+    background-image: url(/Assets/img/software-logo/XD.png);
+  }
+  #PS {
+    background-image: url(/Assets/img/software-logo/Photoshop.png);
+  }
+  #AIlogo {
+    background-image: url(/Assets/img/software-logo/Illustrator.png);
+  }
+  #AElogo {
+    background-image: url(/Assets/img/software-logo/After-Effects.png);
+  }
+  #PPlogo {
+    background-image: url(/Assets/img/software-logo/Premiere.png);
+  }
+  #IDlogo {
+    background-image: url(/Assets/img/software-logo/Indesign.png);
+  }
+  #zeplin {
+    background-image: url(/Assets/img/software-logo/zeplin.png);
+  }
+  #abstractlogo {
+    background-image: url(/Assets/img/software-logo/Abstract.png);
+  }
+  #VSCode {
+    background-image: url(/Assets/img/software-logo/VS-Code.png);
+  }
+}
+
+// MOBILE
+@media only screen and (max-width: 1024px) {
+  .heading {
+    font-size: 7vh;
+  }
+  .title {
+    font-family: var(--poppins);
+    font-weight: 100;
+    font-size: 6vh;
+    letter-spacing: 2px;
+  }
+  button {
+    width: 80vw;
+    height: 8vh;
+   
+  }
+  .buttondark {
+    color: #fff;
+    border: 2px solid #fff;
+    color: #fff;
+    background-color: #333;
+    justify-items: center;
+    text-align: center;
+    vertical-align: center;
+    align-items: center;
+    display: inline-block;
+  }
+  
+  .buttondark:hover{
+    color:#333;
+    background-color: #fff;
+  }
+  .subhead {
+    font-size: 3vh;
+    font-family: var(--poppins);
+    color: var(--for);
+    text-align: center;
+    margin: 60px 0 30px 0;
+  }
+  #hero {
+    height:100vh;
+    width: 100%;
+    background-color: var(--for1);
+    padding: 0px;
+    
+    .siconhero{
+      display: none;
+    }
+
+    #logo {
+      height: 10vh;
+      width: 100px;
+    }
+  }
+
+  #who {
+    height: auto;
+    #aboutme {
+      margin-top: 50px;
+      display: grid;
+      grid-template-rows: auto;
+    }
+    .aboutme {
+      width: 80vw;
+      align-self: center;
+    }
+    #mydp {
+      height: 80vw;
+      width: 80vw;
+    }
+
+    .subhead {
+      text-align: center;
+      line-height: 4rem;
+    }
+  }
+
+  section {
+    padding: 10vh 10vw 6vh 10vw;
+  }
+
+  #what {
+    text-align: center;
+
+    .workgrid {
+      margin: 60px 0 60px 0;
+      height: 900px;
+      width: 100%;
+      display: grid;
+      grid-template-rows: 1fr 1fr 1fr;
+      align-self: center;
+      grid-gap: 10px;
+
+      div {
+        background-color: var(--mid);
+      }
+    }
+  }
+  #skills {
+    height: 860px;
+    position: relative;
+  }
+  #skill {
+    width: 100%;
+    height: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: auto;
+    grid-gap: 20px;
+
+    H3 {
+      font-size: 2vh;
+      margin: 20px 0 20px 0;
+      display: block;
+    }
+  }
+
+  #s1 {
+    width: 90%;
+    transition: 0.5 ease-in;
+  }
+  #s2 {
+    width: 90%;
+    transition: 0.5 ease-in;
+  }
+  #s3 {
+    width: 90%;
+    transition: 0.5 ease-in;
+  }
+  #s4 {
+    width: 90%;
+    transition: 0.5 ease-in;
+  }
+  #s5 {
+    width: 90%;
+    transition: 0.5 ease-in;
+  }
+  #s6 {
+    width: 90%;
+    transition: 0.5 ease-in;
+  }
+  #s7 {
+    width: 90%;
+    transition: 0.5 ease-in;
+  }
+  #s8 {
+    width: 90%;
+    transition: 0.5 ease-in;
+  }
+  #s9 {
+    width: 90%;
+    transition: 0.5 ease-in;
+  }
+  #s10 {
+    width: 90%;
+    transition: 0.5 ease-in;
+  }
+  #s11 {
+    width: 90%;
+    transition: 0.5 ease-in;
+  }
+  #s12 {
+    width: 90%;
+    transition: 0.5 ease-in;
+  }
+  #softwares {
+    height: 800px;
+  }
+  #software {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    grid-column-gap: 20px;
+  }
+
+  .software {
+    width: auto;
+    height: 90px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .softlogo {
+    width: 100%;
+    max-width: 180px;
+    height: 90px;
+  }
+
+  #love {
+    position: relative;
+    height: auto;
+
+    #hobbies {
+      width: 100%;
+    }
+
+    .hobby {
+      display: grid;
+      grid-template-rows: 1fr 1fr;
+      div {
+        width: 100%;
+      }
+      .hobbypic {
+        grid-column: 1/3;
+        background-image: url(/Assets/img/gauravborra.jpg);
+        background-position: center;
+        background-size: cover;
+      }
+    }
+
+    button {
+      visibility: hidden;
+    }
+    .hobby {
+      height: 80vh;
+      width: 100%;
+
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+    .hobbypic {
+      background-color: var(--for1);
+    }
+    .hobbyinfo {
+      justify-self: center;
+      align-self: center;
+      text-align: center;
+    }
+  }
+
+  #footer {
+    height: auto;
+    color: white;
+    background-color: var(--for1);
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+    font-family: var(--poppins);
+
+    .social {
+      display: inline-block;
+      width: 100%;
+    }
+    .ficon {
+      fill: var(--primary);
+      height: auto;
+      width: 20px;
+      margin: 6vh 10px;
+    }
+    h4 {
+      font-size: 12px;
+      font-weight: 300;
+      letter-spacing: 4px;
+      font-family: var(--poppins);
+    }
+
+    .fcollection {
+      display: hidden;
+      padding: 5vh 4vw;
+      color: var(--background);
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-gap: 20px;
+
+      h4:nth-child(odd) {
+        justify-self: start;
+        text-align: start;
+      }
+      h4:nth-child(even) {
+        justify-self: end;
+        text-align: end;
+      }
+
+      H5 {
+        font-family: var(--poppins);
+        grid-column: 1/3;
+        justify-self: center;
+        color: var(--mid);
+        font-size: 24px;
+        font-weight: 300;
+        letter-spacing: 2px;
+      }
+    }
+
+    #footinfo {
+      text-align: center;
+      padding: 5vh 4vw;
+
+      left: 2vw;
+      bottom: 1.5vw;
+      div {
+        padding: 6px;
+      }
+      .phoneicon {
+        background-image: url(/Assets/Svg/whatsapp.svg);
+        width: 20px;
+        height: 20px;
+        display: inline-block;
+      }
+
+      a h4 {
+        display: inline-block;
+        font-size: 12px;
+        color: var(--background);
+        transform: translateY(-11px);
+        margin: 0 10px;
+      }
+
+      .emailicon {
+        background-image: url(/Assets/Svg/mail.svg);
+        background-repeat: no-repeat;
+        width: 20px;
+        height: 20px;
+        display: inline-block;
+      }
+    }
+  }
+
+  footer {
+    height: 8vh;
+    color: white;
+    text-align: center;
+    width: 100%;
+    background-color: black;
+    bottom: 0px;
+    p {
+      padding: 2vh 0;
+      margin: 0px;
+    }
+  }
+  #insta {
+    padding: 4vw 6vw;
+  }
+}
+
+@media only screen and (min-width: 441px) {
+  #skill {
+    width: 100%;
+    height: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-rows: auto;
+    grid-gap: 20px;
+
+    H3 {
+      font-size: 2vh;
+      margin: 20px 0 20px 0;
+      display: block;
+    }
+  }
+  #software {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+    grid-column-gap: 20px;
+  }
+
+  .fcollection {
+    padding: 5vh 4vw;
+    color: var(--background);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+
+    h4:nth-child(odd) {
+      justify-self: start;
+      text-align: start;
+    }
+    h4:nth-child(even) {
+      justify-self: end;
+      text-align: end;
+    }
+
+    H5 {
+      font-family: var(--poppins);
+      grid-column: 1/3;
+      justify-self: center;
+      color: var(--mid);
+      font-size: 24px;
+      font-weight: 300;
+      letter-spacing: 2px;
+    }
+  }
+}
+
+/* normal laptops*/
+@media (min-width: 1025px) {
+  #aboutme {
+    height: 70vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-self: center;
+  }
+
+  .hvr-float-shadow {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0);
+    position: relative;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+  }
+  .hvr-float-shadow:before {
+    pointer-events: none;
+    position: absolute;
+    z-index: -1;
+    content: '';
+    top: 100%;
+    left: 40%;
+    height: 10px;
+    width: 20%;
+    opacity: 0;
+    background: -webkit-radial-gradient(center, ellipse, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0) 80%);
+    background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0) 80%);
+    /* W3C */
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: transform, opacity;
+    transition-property: transform, opacity;
+  }
+  .hvr-float-shadow:hover, .hvr-float-shadow:focus, .hvr-float-shadow:active {
+    -webkit-transform: translateY(-5px);
+    transform: translateY(-5px);
+    /* move the element up by 5px */
+  }
+  .hvr-float-shadow:hover:before, .hvr-float-shadow:focus:before, .hvr-float-shadow:active:before {
+    opacity: 1;
+    -webkit-transform: translateY(5px);
+    transform: translateY(5px);
+    /* move the element down by 5px (it will stay in place because it's attached to the element that also moves up 5px) */
+  }
+
+  #hero {
+    span:hover {
+      color: var(--primary);
+    }
+    .siconhero{
+    height: auto;
+    width: 20px;
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    .hicon{
+      height: 20px;
+      width: 20px;
+      fill: var(--background);
+      margin: 15px 0;
+
+    }
+    
+
+    }
+
+
+  }
+  #who {
+    .subhead {
+      text-align: left;
+    }
+    .aboutme {
+      justify-self: center;
+      height: 70vh;
+      width: 70vh;
+    }
+    p {
+      height: 70vh;
+      width: 70vh;
+      margin: 0px;
+      padding: 60px;
+    }
+  
+#mydpme
+
+  }
+
+  #what {
+    .heading {
+      z-index: 1;
+    }
+    .workgrid {
+      margin: 60px 0 60px 0;
+      height: 346px;
+
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      justify-self: center;
+      grid-gap: 20px;
+
+      div {
+        background-color: var(--mid);
+      }
+    }
+  }
+
+  #skills {
+    min-height: 800px;
+    position: relative;
+    H2 {
+      display: block;
+      position: normal;
+    }
+  }
+  #skill {
+    width: 100%;
+    height: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-auto-rows: auto;
+    grid-gap: 20px;
+  }
+  .skill {
+    position: relative;
+    height: 10vh;
+    width: auto;
+    align-self: center;
+    text-align: start;
+
+    H3 {
+      display: inline-block;
+      vertical-align: middle;
+      font-size: 10vw;
+      margin: 30px 0 30px 0px;
+    }
+    .skillhide {
+      position: absolute;
+      height: 10px;
+      width: 100%;
+      bottom: 0px;
+      background-color: var(--bg1);
+    }
+
+    .skillhover {
+      height: 10px;
+      width: 0%;
+      bottom: 0px;
+      background-color: var(--primary);
+      transition: 0.5s ease-in;
+    }
+  }
+
+  #skill :hover #s1 {
+    width: 90%;
+    transition: 0.5s ease-in;
+  }
+  #skill :hover #s2 {
+    width: 90%;
+    transition: 0.5 ease-in;
+  }
+  #skill :hover #s3 {
+    width: 90%;
+    transition: 0.5 ease-in;
+  }
+  #skill :hover #s4 {
+    width: 90%;
+    transition: 0.5 ease-in;
+  }
+  #skill :hover #s5 {
+    width: 90%;
+    transition: 0.5 ease-in;
+  }
+  #skill :hover #s6 {
+    width: 90%;
+    transition: 0.5 ease-in;
+  }
+  #skill :hover #s7 {
+    width: 90%;
+    transition: 0.5 ease-in;
+  }
+  #skill :hover #s8 {
+    width: 90%;
+    transition: 0.5 ease-in;
+  }
+  #skill :hover #s9 {
+    width: 90%;
+    transition: 0.5 ease-in;
+  }
+  #skill :hover #s10 {
+    width: 90%;
+    transition: 0.5 ease-in;
+  }
+  #skill :hover #s11 {
+    width: 90%;
+    transition: 0.5 ease-in;
+  }
+  #skill :hover #s12 {
+    width: 90%;
+    transition: 0.5 ease-in;
+  }
+
+  #softwares {
+    height: 660px;
+  }
+
+  #software {
+    width: 100%;
+    height: 250px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 10px;
+  }
+
+  .software {
+    min-height: 150px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  #love {
+    position: relative;
+    min-height:3600px; 
+
+    .button {
+      visibility: hidden;
+    }
+    #hobbies {
+      width: 100%;
+    }
+
+    .hobby:nth-child(odd) {
+      margin: 100px 0 100px 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr;
+
+      .hobbypic {
+        height: 100%;
+        background-image: url(/Assets/img/gauravborra.jpg);
+        background-position: center;
+        background-size: cover; 
+      }
+      .hobbyinfo {
+        justify-self: center;
+        text-align: center;
+        align-self: center;
+        padding: 60px;
+      }
+    }
+    .hobby:nth-child(even) {
+      margin: 100px 0 100px 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr;
+
+      .hobbypic {
+        height: 100%;
+        grid-column: 2/3;
+        grid-row: 1/3;
+        grid-auto-rows: auto;
+        background-image: url(/Assets/img/gauravborra.jpg);
+        background-position: center;
+        background-size: cover;
+      }
+      .hobbyinfo {
+        padding: 60px;
+        text-align: center;
+        justify-self: end;
+        align-self: center;
+      }
+    }
+
+    .hobby {
+      height: 80vh;
+      width: 100%;
+    }
+
+    #photolove{
+      background-image: url(/Assets/img/Love/photbg.png);
+    }
+
+
+  }
+  #touch{
+
+  .subhead{
+    margin-top:10vh;
+  }
+
+
+  } 
+  #insta {
+    padding: 4vw 6vw;
+  }
+
+  #footer {
+    height: 300px;
+    color: white;
+    background-color: var(--for1);
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+    font-family: var(--poppins);
+
+    .social {
+      position: absolute;
+      display: inline-block;
+      top: 4vh;
+      transform: translateX(-50%);
+    }
+    .ficon {
+      fill: var(--background);
+      height: auto;
+      width: 25px;
+      margin: 20px;
+    }
+    .ficon:hover {
+      fill: var(--primary);
+    }
+
+    h4 {
+      font-size: 16px;
+      font-weight: 400;
+      letter-spacing: 4px;
+      justify-self: end;
+      font-family: var(--poppins);
+    }
+
+    .fcollection {
+      position: absolute;
+      right: 2vw;
+      bottom: 1vh;
+      color: var(--background);
+      width: 60%;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 20px;
+      text-align: end;
+
+      H5 {
+        font-family: var(--poppins);
+        grid-column: 3/4;
+        justify-self: end;
+        color: var(--mid);
+        font-size: 24px;
+        font-weight: 300;
+        letter-spacing: 2px;
+      }
+    }
+
+    #footinfo {
+      text-align: left;
+      position: absolute;
+      left: 2vw;
+      bottom: 1.5vw;
+      div {
+        margin: 6px;
+      }
+      .phoneicon {
+        background-image: url(/Assets/Svg/phone.svg);
+        width: 20px;
+        height: 20px;
+        display: inline-block;
+      }
+      h4 {
+        display: inline-block;
+        transform: translateY(-11px);
+        margin: 0 10px;
+      }
+      .emailicon {
+        background-image: url(/Assets/Svg/mail.svg);
+        background-repeat: no-repeat;
+        width: 20px;
+        height: 20px;
+        display: inline-block;
+      }
+    }
+  }
+
+  footer {
+    height: 8vh;
+    color: white;
+    text-align: center;
+    width: 100%;
+    background-color: black;
+    bottom: 0px;
+    p {
+      padding: 2vh 0;
+      margin: 0px;
+    }
+  }
+}
+
+/* high res laptop/desktop */
+
+@media (min-width: 1367px) {
+  #who {
+    height: auto;
+    background-color: var(--background);
+    position: relative;
+    H1 {
+      top: 5vh;
+      right: 10vw;
+    }
+
+    #mydp {
+      background-color: var(--for1);
+      background-image: url(/Assets/img/me_bg.png);
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      transform-style: preserve-3d;
+      transform: perspective(1000px);
+    
+      #mydpme{
+        position: relative;
+
+        img{
+          position: absolute;
+        transform: translateZ(200px);
+      }
+    }
+    }
+
+
+  }
+
+  #skills {
+    min-height: 600px;
+    position: relative;
+    H2 {
+      display: block;
+      position: normal;
+    }
+  }
+
+  #skill {
+    width: 100%;
+    height: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-auto-rows: auto;
+    grid-gap: 20px;
+  }
+
+#footer{
+  height: 40vh;
+  .fcollection {
+    position: absolute;
+    right: 2vw;
+    bottom: 1vh;
+    color: var(--background);
+    width: 60%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+    text-align: end;
+
+    H5 {
+      font-family: var(--poppins);
+      grid-column: 3/4;
+      justify-self: end;
+      color: var(--mid);
+      font-size: 24px;
+      font-weight: 300;
+      letter-spacing: 2px;
+    }
+  }
+}
+
+}
+
+/* Tablets 
+@media only screen and (max-width: 767px) {
+  
+}
+}
+
+
+
+
+
+
+//@media (min-width: 1025px) and (max-width: 1366px) {
+*/

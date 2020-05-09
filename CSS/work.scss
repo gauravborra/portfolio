@@ -1,0 +1,343 @@
+:root {
+  --primary: rgb(127, 218, 9);
+  --for2: #333;
+  --for: black;
+  --for1: #212121;
+  --background: #fff;
+  --bg1: #e0e0e0;
+  --mid: #808080;
+  --for:#000000;
+  --poppins: "Poppins", sans-serif;
+  --cormo: "Cormorant Garamond", serif;
+}
+/* normal laptops*/
+@media (min-width: 1025px){
+ 
+#projects{
+    min-height: 2000px;
+    width: 100%;
+    display: block;
+  button{
+    margin: 3vh 0;
+
+    #projectgrid{
+      width: 100%;
+     
+    }
+
+  }
+
+
+   .project{
+     position: relative;
+    height: 70vh;
+   }
+  
+      .project:nth-child(odd) {
+        margin: 10vh 0 30vh 0;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: 1fr;
+  
+        .projectcover {
+          border-radius: 20px;
+          border:solid 10px #666;
+          height:100%;
+          background-image: url(/Assets/img/scicomm.png);
+          background-position: center;
+          background-size: cover;
+          transition: .5s;
+        }
+
+        
+        .projectinfo{
+          height: 30vh;
+          justify-self: end;
+          text-align: start;
+          align-self: center;
+          padding: 60px;
+    
+        }
+
+        H3::before{
+          content: '';
+          display: inline-block;
+          height: 2px;
+          width: 20px;
+          background-color: var(--for2);
+          transform: translateY(-5px);
+          transition: .5s;
+        }
+
+        h3:hover:before{
+          width: 50px;
+          transition: .5s;
+        }
+
+      }
+      .project:nth-child(even) {
+        margin: 100px 0 100px 0;
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: 1fr;
+        .projectcover {
+          border-radius: 20px;
+          border:solid 10px #666;
+          height: 100%;
+          grid-column: 2/3;
+          grid-row: 1/3;
+          grid-auto-rows: auto;
+          background-image:url(/Assets/img/nutriparcel.png);
+          background-position: center;
+          background-size: cover;
+          transition: .5s;
+        }
+        .projectinfo {
+          padding: 60px;
+          text-align: end;
+          justify-self: start;
+          align-self: center;
+            
+        }
+
+        H3::after{
+          content: '';
+          display: inline-block;
+          height: 2px;
+          width: 20px;
+          background-color: var(--for2);
+          transform: translateY(-5px);
+          transition: .5s;
+        }
+        H3:hover:after {
+              width: 50px;
+              transition: .5s;
+              display: inline-block;
+            }
+
+
+      }
+    }
+
+#collection{
+  height: 4000px;
+
+#collectiongrid{
+  width: 100%;
+  height: 2000px;
+  display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 100px;
+  
+  }
+.collection{
+height: 35vw;
+width: 35vw;
+background-image:url(/Assets/img/headphone-popup.jpg);
+background-repeat: no-repeat;
+background-position: center;
+background-size: cover;
+justify-self: center;
+align-self: center;
+transform-style: preserve-3d;
+transform: perspective(1000px);
+position: relative;
+
+
+.colloverlay{
+background-color:rgba($color: #000000, $alpha: 0.2);
+position: relative;
+height: 100%;
+width: 100%;
+opacity: 0;
+transition: .3s;
+
+
+.title{
+  position: absolute;
+  opacity: 1;
+  color:white;
+  text-shadow: 0px 0px 10px 10px rgba($color: #000000, $alpha: 1.0);
+  text-align: center;
+  left: 17%; top:45%;
+  transform: translate(-50%,-50%);
+  transform: translateZ(100px);
+  transition: .2s;
+  
+}
+}
+} 
+.collection:hover .colloverlay {
+opacity: 1;
+} 
+}
+#mcollection{
+  display: none;
+}
+
+}
+
+// Mobile Screens
+@media only screen and (max-width: 1024px){
+#projects{
+  min-height: 1000px;
+  width: 100%;
+  display: block;
+button{
+  margin: 3vh 0;
+
+  #projectgrid{
+    height:500px;
+    width: 80vh;
+  }
+
+}
+
+ .project{
+   position: relative;
+   margin: 100px 0 100px 0;
+  
+   button{
+    width: 60vw;
+  }
+ }
+
+    .project:nth-child(odd) {
+    
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr;
+
+      .projectcover {
+        width: 100%;
+        border-radius: 20px;
+        border:solid 5px #666;
+        background-image: url(/Assets/img/scicomm.png);
+        background-position: center;
+        justify-self: center;
+        background-size: cover;
+        transition: .5s;
+      }
+
+      
+      .projectinfo{
+        height: 30vh;
+        justify-self: center;
+        text-align: center;
+        align-self: center;
+        padding: 10px 10px;
+      
+  
+      }
+
+      H3::before{
+        content: '';
+        display: inline-block;
+        height: 2px;
+        width: 20px;
+        background-color: var(--for2);
+        transform: translateY(-5px);
+        transition: .5s;
+      }
+
+      h3:hover:before{
+        width: 50px;
+        transition: .5s;
+      }
+
+    }
+    .project:nth-child(even) {
+     
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr;
+      .projectcover {
+        border-radius: 20px;
+        border:solid 5px #666;      
+        grid-auto-rows: auto;
+        background-image:url(/Assets/img/nutriparcel.png);
+        background-position: center;
+        background-size: cover;
+        transition: .5s;
+      }
+      .projectinfo {
+        padding: 40px 10px;
+        height: auto;
+        width: 80vw;
+        text-align: center;
+        justify-self: center;
+        align-self: center;
+          
+      }
+
+      H3::after{
+        content: '';
+        display: inline-block;
+        height: 2px;
+        width: 20px;
+        background-color: var(--for2);
+        transform: translateY(-5px);
+        transition: .5s;
+      }
+      H3:hover:after {
+            width: 50px;
+            transition: .5s;
+            display: inline-block;
+          }
+
+
+    }
+  }
+
+  #collection{
+   display: none;
+  } 
+  }
+  #mcollection{
+    min-height: 2000px;
+  
+  #mcollectiongrid{
+    width: 100%;
+    display: grid;
+      grid-template-columns: 1fr;
+      grid-gap: 100px;
+      grid-row-gap: 10vw;
+    
+    }
+  .collection{
+  height: 80vw;
+  width: 80vw;
+  background-image:url(/Assets/img/headphone-popup.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  justify-self: center;
+  align-self: center;
+  position: relative;
+  .colloverlay{
+  background-color:rgba($color: #000000, $alpha: 0.2);
+  position: relative;
+  height: 100%;
+  width: 100%;
+  opacity: 1;
+  transition: .3s;
+  
+  
+  .title{
+    position: absolute;
+    opacity: 1;
+    color:white;
+    text-align: center;
+    left: 50%; top:50%;
+    transform: translate(-50%,-50%);
+   
+    
+  }
+  }
+  } 
+ 
+  
+
+
+
+}
