@@ -11,10 +11,10 @@
   --cormo: "Cormorant Garamond", serif;
 }
 
-html {
+html,body {
   width: 100%;
-  margin: 0;
-  padding: 0;
+  margin: 0px;
+  padding: 0px;
 }
 
 
@@ -41,13 +41,16 @@ H3 {
 
 .title {
   font-family: var(--poppins);
-  font-weight: 100;
+  font-weight: 400;
   font-size: 3vw;
   letter-spacing: 2px;
+  line-height: 70px;
+  text-align: center;
+  
 }
 .subtitle {
   font-family: var(--poppins);
-
+  font-size: 2.5vh;
 }
 
 section {
@@ -59,11 +62,11 @@ section {
   font-family: var(--cormo);
   font-size: 20vh;
   font-style: italic;
+  font-weight: 400;;
   color: var(--bg1);
   position: absolute;
   white-space: nowrap;
-  z-index: -1;
-  top: 5vh;
+  top: -12vh;
   right: 10vw;
 }
 
@@ -71,7 +74,6 @@ section {
   font-family: var(--poppins);
   font-size: 4vh;
   color: var(--for);
-
   text-align: center;
   margin: 60px 0 60px 0;
 }
@@ -126,7 +128,7 @@ transition: .2s;
 
   #logo {
     font-family: var(--poppins);
-    font-weight: 900;
+  
     font-size: 3vw;
     color: white;
     padding: 20px;
@@ -134,7 +136,7 @@ transition: .2s;
   .heromenu {
     position: absolute;
     font-family: var(--poppins);
-    font-weight: 900;
+    font-weight: 500;
     font-size: 1 rem;
     color: white;
     letter-spacing: 3px;
@@ -246,13 +248,6 @@ transition: .2s;
   height: auto;
   background-color: var(--background);
   position: relative;
-  .heading {
-    z-index: 1;
-  }
-  H1 {
-    top: 5vh;
-    right: 10vw;
-  }
 
   #mydp {
     background-color: var(--for1);
@@ -426,10 +421,10 @@ transition: .2s;
     #aboutme {
       margin-top: 50px;
       display: grid;
+      grid-template-columns: 1fr 1fr;
       grid-template-rows: auto;
     }
     .aboutme {
-      width: 80vw;
       align-self: center;
     }
     #mydp {
@@ -821,38 +816,27 @@ transition: .2s;
       width: 20px;
       fill: var(--background);
       margin: 15px 0;
-
     }
-    
-
     }
-
-
+  
   }
+
   #who {
     .subhead {
       text-align: left;
     }
     .aboutme {
-      justify-self: center;
-      height: 70vh;
-      width: 70vh;
+    height: 100%;
     }
     p {
-      height: 70vh;
-      width: 70vh;
       margin: 0px;
       padding: 60px;
     }
-  
-#mydpme
 
   }
 
   #what {
-    .heading {
-      z-index: 1;
-    }
+   
     .workgrid {
       margin: 60px 0 60px 0;
       height: 346px;
@@ -1171,25 +1155,23 @@ transition: .2s;
 
     #mydp {
       background-color: var(--for1);
-      background-image: url(/Assets/img/me_bg.png);
+      background-image: url(/Assets/img/gauravborra.jpg);
       background-position: center;
       background-size: cover;
       background-repeat: no-repeat;
-      transform-style: preserve-3d;
-      transform: perspective(1000px);
-    
-      #mydpme{
-        position: relative;
 
-        img{
-          position: absolute;
-        transform: translateZ(200px);
-      }
-    }
     }
 
 
   }
+  #aboutme {
+    height: 70vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-self: center;
+  }
+
 
   #skills {
     min-height: 600px;

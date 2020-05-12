@@ -11,10 +11,10 @@
   --cormo: "Cormorant Garamond", serif;
 }
 
-html {
+html, body {
   width: 100%;
-  margin: 0;
-  padding: 0;
+  margin: 0px;
+  padding: 0px;
 }
 
 a,
@@ -40,13 +40,16 @@ H3 {
 
 .title {
   font-family: var(--poppins);
-  font-weight: 100;
+  font-weight: 400;
   font-size: 3vw;
   letter-spacing: 2px;
+  line-height: 70px;
+  text-align: center;
 }
 
 .subtitle {
   font-family: var(--poppins);
+  font-size: 2.5vh;
 }
 
 section {
@@ -58,11 +61,11 @@ section {
   font-family: var(--cormo);
   font-size: 20vh;
   font-style: italic;
+  font-weight: 400;
   color: var(--bg1);
   position: absolute;
   white-space: nowrap;
-  z-index: -1;
-  top: 5vh;
+  top: -12vh;
   right: 10vw;
 }
 
@@ -159,7 +162,6 @@ button:hover {
 
 #hero #logo {
   font-family: var(--poppins);
-  font-weight: 900;
   font-size: 3vw;
   color: white;
   padding: 20px;
@@ -168,7 +170,7 @@ button:hover {
 #hero .heromenu {
   position: absolute;
   font-family: var(--poppins);
-  font-weight: 900;
+  font-weight: 500;
   font-size: 1 rem;
   color: white;
   letter-spacing: 3px;
@@ -285,15 +287,6 @@ button:hover {
   height: auto;
   background-color: var(--background);
   position: relative;
-}
-
-#who .heading {
-  z-index: 1;
-}
-
-#who H1 {
-  top: 5vh;
-  right: 10vw;
 }
 
 #who #mydp {
@@ -485,11 +478,12 @@ button:hover {
     margin-top: 50px;
     display: -ms-grid;
     display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
     -ms-grid-rows: auto;
         grid-template-rows: auto;
   }
   #who .aboutme {
-    width: 80vw;
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
         align-self: center;
@@ -913,19 +907,11 @@ button:hover {
     text-align: left;
   }
   #who .aboutme {
-    -ms-grid-column-align: center;
-        justify-self: center;
-    height: 70vh;
-    width: 70vh;
+    height: 100%;
   }
   #who p {
-    height: 70vh;
-    width: 70vh;
     margin: 0px;
     padding: 60px;
-  }
-  #what .heading {
-    z-index: 1;
   }
   #what .workgrid {
     margin: 60px 0 60px 0;
@@ -1259,10 +1245,20 @@ button:hover {
   }
   #who #mydp {
     background-color: var(--for1);
-    background-image: url(/Assets/img/me_bg.png);
+    background-image: url(/Assets/img/gauravborra.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+  }
+  #aboutme {
+    height: 70vh;
+    width: 100%;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -ms-grid-row-align: center;
+        align-self: center;
   }
   #skills {
     min-height: 600px;
