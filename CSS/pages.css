@@ -160,6 +160,10 @@ section {
   margin: 15px 0;
 }
 
+.next:hover {
+  cursor: url(/Assets/png/right-arrow.png), 40px;
+}
+
 .subtitle {
   margin: 0px;
 }
@@ -225,5 +229,29 @@ section {
   color: var(--primary);
   -webkit-transition: .3s;
   transition: .3s;
+}
+
+@media only screen and (max-width: 1024px) {
+  .articles {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    grid-gap: 3vw;
+  }
+  .articles .pleft {
+    text-align: center;
+  }
+  .articles .pright {
+    text-align: center;
+  }
+  .articles .articleheading {
+    font-size: 3vh;
+  }
+  .pheading {
+    font-size: 5vh;
+    overflow-wrap: anywhere;
+    text-align: center;
+  }
 }
 /*# sourceMappingURL=pages.css.map */

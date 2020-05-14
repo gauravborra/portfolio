@@ -26,7 +26,10 @@ a:active {
   color: inherit;
 }
 
-
+a:hover{
+  color:var(--primary);
+  transition: .4s;
+}
 
 .higher {
   position: relative;
@@ -41,10 +44,9 @@ H3 {
 
 .title {
   font-family: var(--poppins);
-  font-weight: 400;
+  font-weight:400;
   font-size: 3vw;
   letter-spacing: 2px;
-  line-height: 70px;
   text-align: center;
   
 }
@@ -53,7 +55,10 @@ H3 {
   font-size: 2.5vh;
 }
 
-section {
+.pad {
+  padding: 0 10vw;
+}
+section{
   position: relative;
   padding: 20vh 10vw 12vh 10vw;
 }
@@ -61,19 +66,20 @@ section {
 .heading {
   font-family: var(--cormo);
   font-size: 20vh;
+  margin: 0px;
   font-style: italic;
-  font-weight: 400;;
+  font-weight: 300;;
   color: var(--bg1);
   position: absolute;
   white-space: nowrap;
-  top: -12vh;
+  top: 1vh;
   right: 10vw;
 }
 
 .subhead {
   font-family: var(--poppins);
   font-size: 4vh;
-  color: var(--for);
+
   text-align: center;
   margin: 60px 0 60px 0;
 }
@@ -159,7 +165,7 @@ transition: .2s;
   #scrolltext {
     bottom: 20px;
     text-align: end;
-    right: 50px;
+    right: 30px;
     font-size: 12px;
     font-weight: 50;
     color: var(--bg1);
@@ -240,7 +246,8 @@ transition: .2s;
   #contact {
     position: absolute;
     bottom: 20px;
-    left: 46%;
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
 // WHO
@@ -263,9 +270,7 @@ transition: .2s;
   width: auto;
   position: relative;
   background-color: var(--for2);
-  h1 {
-    color: var(--for);
-  }
+
   h2 {
     text-align: center;
     color: var(--background);
@@ -365,12 +370,23 @@ transition: .2s;
 @media only screen and (max-width: 1024px) {
   .heading {
     font-size: 7vh;
+    font-family: var(--cormo);
+    font-style: italic;
+    font-weight: 300;;
+    color: var(--bg1);
+    position: absolute;
+    white-space: nowrap;
+    top: 5vw;
+    right: 10vw;
+  }
+  .hidden-m{
+    display: none;
   }
   .title {
     font-family: var(--poppins);
-    font-weight: 100;
-    font-size: 6vh;
-    letter-spacing: 2px;
+    font-size: 8vw;
+    line-height: 11vw;
+   
   }
   button {
     width: 80vw;
@@ -405,14 +421,15 @@ transition: .2s;
     width: 100%;
     background-color: var(--for1);
     padding: 0px;
+   
     
     .siconhero{
       display: none;
     }
 
     #logo {
-      height: 10vh;
-      width: 100px;
+      font-size: 6vh;
+   
     }
   }
 
@@ -421,7 +438,7 @@ transition: .2s;
     #aboutme {
       margin-top: 50px;
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1fr;
       grid-template-rows: auto;
     }
     .aboutme {
@@ -434,12 +451,15 @@ transition: .2s;
 
     .subhead {
       text-align: center;
-      line-height: 4rem;
+      line-height: 3rem;
     }
   }
 
-  section {
+  section{
     padding: 10vh 10vw 6vh 10vw;
+  }
+  .pad {
+    padding:0 10vw;
   }
 
   #what {
@@ -682,7 +702,7 @@ transition: .2s;
   }
 
   footer {
-    height: 8vh;
+    height: 20vh;
     color: white;
     text-align: center;
     width: 100%;
@@ -696,9 +716,47 @@ transition: .2s;
   #insta {
     padding: 4vw 6vw;
   }
+  .pagefooter{
+position: relative;
+    .footinfo{
+    display: inline-block;
+    margin-left:50px;
+    position: absolute;
+    bottom: 0px;
+    }  
+  svg{
+      width: 20px;
+      height: 20px;
+      margin: 20px;
+      fill: var(--background);
+    }
+    .social {
+      width: 100%;
+      position: absolute;
+    
+      left:50%;
+      transform: translateX(-50%);
+    }
+    .ficon {
+      fill: var(--background);
+      height: auto;
+      width: 20px;
+      margin: 15px;
+    }
+    .ficon:hover {
+      fill: var(--primary);
+    }
+    
+  
+  }
+
 }
 
 @media only screen and (min-width: 441px) {
+  .hidden-l{
+    display: none;
+  }
+  
   #skill {
     width: 100%;
     height: 50px;
@@ -757,6 +815,7 @@ transition: .2s;
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-self: center;
+
   }
 
   .hvr-float-shadow {
@@ -824,11 +883,15 @@ transition: .2s;
   #who {
     .subhead {
       text-align: left;
+      justify-self: center;
+      align-self: center;;
     }
     .aboutme {
     height: 100%;
+    text-align: center;
     }
     p {
+      display: inline-block;
       margin: 0px;
       padding: 60px;
     }
@@ -839,19 +902,61 @@ transition: .2s;
    
     .workgrid {
       margin: 60px 0 60px 0;
-      height: 346px;
-
+      height: 75vh;
       width: 100%;
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
       justify-self: center;
-      grid-gap: 20px;
+      grid-gap: 10vh;
 
-      div {
-        background-color: var(--mid);
-      }
+    
     }
   }
+  .collection{
+    height: 35vw;
+    width: 35vw;
+    background-image:url(/Assets/img/headphone-popup.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    justify-self: center;
+    align-self: center;
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+    position: relative;
+    
+    
+    .colloverlay{
+    background-color:rgba($color: #000000, $alpha: 0.2);
+    position: relative;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .3s;
+    
+    
+    .title{
+      position: absolute;
+      opacity: 1;
+      color:white;
+      text-shadow: 0px 0px 10px 10px rgba($color: #000000, $alpha: 0.2);
+      text-align: center;
+      left: 23%; top:36%;
+      transform: translate(-50%,-50%);
+      transform: translateZ(100px);
+      transition: .2s;
+      
+    }
+    }
+    } 
+    .collection:hover .colloverlay {
+      opacity: 1;
+     } 
+    
+      
+      
+
+  
 
   #skills {
     min-height: 800px;
@@ -1032,9 +1137,29 @@ transition: .2s;
 
   }
   #touch{
+    padding: 20vh 0 12vh 0;
+    height: 1200px;
 
+ 
+  .heading{
+  transform: translateY(-100px);
+}
   .subhead{
-    margin-top:10vh;
+    display: block;
+    margin:3vh;
+  }
+  .touchbg{
+  height: 30vh;
+  width: 100%;
+  text-align: center;
+  background-color: var(--for1);
+  color: var(--background);
+  span{
+    color: var(--primary);
+  }
+  h2{
+padding:8vh;
+  }
   }
 
 
@@ -1073,6 +1198,7 @@ transition: .2s;
       font-weight: 400;
       letter-spacing: 4px;
       justify-self: end;
+      margin: 0px;
       font-family: var(--poppins);
     }
 
@@ -1086,8 +1212,10 @@ transition: .2s;
       grid-template-columns: 1fr 1fr 1fr;
       grid-gap: 20px;
       text-align: end;
+      z-index: 0;
 
       H5 {
+        margin: 0px;
         font-family: var(--poppins);
         grid-column: 3/4;
         justify-self: end;
@@ -1139,6 +1267,47 @@ transition: .2s;
       margin: 0px;
     }
   }
+
+.pagefooter{
+
+  .footinfo{
+  display: inline-block;
+  margin-left:50px;
+  }  
+svg{
+    width: 20px;
+    height: 20px;
+    margin: 20px;
+    fill: var(--background);
+  }
+  .social {
+    position: absolute;
+    display: inline-block;
+    right: 20px;
+  }
+  .ficon {
+    fill: var(--background);
+    height: auto;
+    width: 20px;
+    margin: 15px;
+  }
+  .ficon:hover {
+    fill: var(--primary);
+  }
+  #footinfo {
+    text-align: left;
+    position: absolute;
+  
+    div {
+      margin: 6px;
+    }
+    
+
+  } 
+  
+
+}
+
 }
 
 /* high res laptop/desktop */
@@ -1169,7 +1338,6 @@ transition: .2s;
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    align-self: center;
   }
 
 
@@ -1192,7 +1360,7 @@ transition: .2s;
   }
 
 #footer{
-  height: 40vh;
+  height: 33vh;
   .fcollection {
     position: absolute;
     right: 2vw;

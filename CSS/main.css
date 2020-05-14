@@ -25,6 +25,12 @@ a:active {
   color: inherit;
 }
 
+a:hover {
+  color: var(--primary);
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
 .higher {
   position: relative;
   z-index: 10;
@@ -43,13 +49,16 @@ H3 {
   font-weight: 400;
   font-size: 3vw;
   letter-spacing: 2px;
-  line-height: 70px;
   text-align: center;
 }
 
 .subtitle {
   font-family: var(--poppins);
   font-size: 2.5vh;
+}
+
+.pad {
+  padding: 0 10vw;
 }
 
 section {
@@ -60,19 +69,19 @@ section {
 .heading {
   font-family: var(--cormo);
   font-size: 20vh;
+  margin: 0px;
   font-style: italic;
-  font-weight: 400;
+  font-weight: 300;
   color: var(--bg1);
   position: absolute;
   white-space: nowrap;
-  top: -12vh;
+  top: 1vh;
   right: 10vw;
 }
 
 .subhead {
   font-family: var(--poppins);
   font-size: 4vh;
-  color: var(--for);
   text-align: center;
   margin: 60px 0 60px 0;
 }
@@ -198,7 +207,7 @@ button:hover {
 #hero #scrolltext {
   bottom: 20px;
   text-align: end;
-  right: 50px;
+  right: 30px;
   font-size: 12px;
   font-weight: 50;
   color: var(--bg1);
@@ -280,7 +289,9 @@ button:hover {
 #hero #contact {
   position: absolute;
   bottom: 20px;
-  left: 46%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 #who {
@@ -303,10 +314,6 @@ button:hover {
   position: relative;
   background-color: var(--for2);
   text-align: center;
-}
-
-#what h1 {
-  color: var(--for);
 }
 
 #what h2 {
@@ -423,12 +430,22 @@ button:hover {
 @media only screen and (max-width: 1024px) {
   .heading {
     font-size: 7vh;
+    font-family: var(--cormo);
+    font-style: italic;
+    font-weight: 300;
+    color: var(--bg1);
+    position: absolute;
+    white-space: nowrap;
+    top: 5vw;
+    right: 10vw;
+  }
+  .hidden-m {
+    display: none;
   }
   .title {
     font-family: var(--poppins);
-    font-weight: 100;
-    font-size: 6vh;
-    letter-spacing: 2px;
+    font-size: 8vw;
+    line-height: 11vw;
   }
   button {
     width: 80vw;
@@ -468,8 +485,7 @@ button:hover {
     display: none;
   }
   #hero #logo {
-    height: 10vh;
-    width: 100px;
+    font-size: 6vh;
   }
   #who {
     height: auto;
@@ -478,8 +494,8 @@ button:hover {
     margin-top: 50px;
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 1fr 1fr;
-        grid-template-columns: 1fr 1fr;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
     -ms-grid-rows: auto;
         grid-template-rows: auto;
   }
@@ -494,10 +510,13 @@ button:hover {
   }
   #who .subhead {
     text-align: center;
-    line-height: 4rem;
+    line-height: 3rem;
   }
   section {
     padding: 10vh 10vw 6vh 10vw;
+  }
+  .pad {
+    padding: 0 10vw;
   }
   #what {
     text-align: center;
@@ -754,7 +773,7 @@ button:hover {
     display: inline-block;
   }
   footer {
-    height: 8vh;
+    height: 20vh;
     color: white;
     text-align: center;
     width: 100%;
@@ -768,9 +787,43 @@ button:hover {
   #insta {
     padding: 4vw 6vw;
   }
+  .pagefooter {
+    position: relative;
+  }
+  .pagefooter .footinfo {
+    display: inline-block;
+    margin-left: 50px;
+    position: absolute;
+    bottom: 0px;
+  }
+  .pagefooter svg {
+    width: 20px;
+    height: 20px;
+    margin: 20px;
+    fill: var(--background);
+  }
+  .pagefooter .social {
+    width: 100%;
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+  .pagefooter .ficon {
+    fill: var(--background);
+    height: auto;
+    width: 20px;
+    margin: 15px;
+  }
+  .pagefooter .ficon:hover {
+    fill: var(--primary);
+  }
 }
 
 @media only screen and (min-width: 441px) {
+  .hidden-l {
+    display: none;
+  }
   #skill {
     width: 100%;
     height: 50px;
@@ -905,28 +958,77 @@ button:hover {
   }
   #who .subhead {
     text-align: left;
+    -ms-grid-column-align: center;
+        justify-self: center;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
   }
   #who .aboutme {
     height: 100%;
+    text-align: center;
   }
   #who p {
+    display: inline-block;
     margin: 0px;
     padding: 60px;
   }
   #what .workgrid {
     margin: 60px 0 60px 0;
-    height: 346px;
+    height: 75vh;
     width: 100%;
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 1fr 1fr 1fr;
-        grid-template-columns: 1fr 1fr 1fr;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
     -ms-grid-column-align: center;
         justify-self: center;
-    grid-gap: 20px;
+    grid-gap: 10vh;
   }
-  #what .workgrid div {
-    background-color: var(--mid);
+  .collection {
+    height: 35vw;
+    width: 35vw;
+    background-image: url(/Assets/img/headphone-popup.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    -ms-grid-column-align: center;
+        justify-self: center;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+    -webkit-transform: perspective(1000px);
+            transform: perspective(1000px);
+    position: relative;
+  }
+  .collection .colloverlay {
+    background-color: rgba(0, 0, 0, 0.2);
+    position: relative;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    -webkit-transition: .3s;
+    transition: .3s;
+  }
+  .collection .colloverlay .title {
+    position: absolute;
+    opacity: 1;
+    color: white;
+    text-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    left: 23%;
+    top: 36%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    -webkit-transform: translateZ(100px);
+            transform: translateZ(100px);
+    -webkit-transition: .2s;
+    transition: .2s;
+  }
+  .collection:hover .colloverlay {
+    opacity: 1;
   }
   #skills {
     min-height: 800px;
@@ -1126,8 +1228,30 @@ button:hover {
   #love #photolove {
     background-image: url(/Assets/img/Love/photbg.png);
   }
+  #touch {
+    padding: 20vh 0 12vh 0;
+    height: 1200px;
+  }
+  #touch .heading {
+    -webkit-transform: translateY(-100px);
+            transform: translateY(-100px);
+  }
   #touch .subhead {
-    margin-top: 10vh;
+    display: block;
+    margin: 3vh;
+  }
+  #touch .touchbg {
+    height: 30vh;
+    width: 100%;
+    text-align: center;
+    background-color: var(--for1);
+    color: var(--background);
+  }
+  #touch .touchbg span {
+    color: var(--primary);
+  }
+  #touch .touchbg h2 {
+    padding: 8vh;
   }
   #insta {
     padding: 4vw 6vw;
@@ -1163,6 +1287,7 @@ button:hover {
     letter-spacing: 4px;
     -ms-grid-column-align: end;
         justify-self: end;
+    margin: 0px;
     font-family: var(--poppins);
   }
   #footer .fcollection {
@@ -1177,8 +1302,10 @@ button:hover {
         grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 20px;
     text-align: end;
+    z-index: 0;
   }
   #footer .fcollection H5 {
+    margin: 0px;
     font-family: var(--poppins);
     -ms-grid-column: 3;
     -ms-grid-column-span: 1;
@@ -1230,6 +1357,37 @@ button:hover {
     padding: 2vh 0;
     margin: 0px;
   }
+  .pagefooter .footinfo {
+    display: inline-block;
+    margin-left: 50px;
+  }
+  .pagefooter svg {
+    width: 20px;
+    height: 20px;
+    margin: 20px;
+    fill: var(--background);
+  }
+  .pagefooter .social {
+    position: absolute;
+    display: inline-block;
+    right: 20px;
+  }
+  .pagefooter .ficon {
+    fill: var(--background);
+    height: auto;
+    width: 20px;
+    margin: 15px;
+  }
+  .pagefooter .ficon:hover {
+    fill: var(--primary);
+  }
+  .pagefooter #footinfo {
+    text-align: left;
+    position: absolute;
+  }
+  .pagefooter #footinfo div {
+    margin: 6px;
+  }
 }
 
 /* high res laptop/desktop */
@@ -1257,8 +1415,6 @@ button:hover {
     display: grid;
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
-    -ms-grid-row-align: center;
-        align-self: center;
   }
   #skills {
     min-height: 600px;
@@ -1279,7 +1435,7 @@ button:hover {
     grid-gap: 20px;
   }
   #footer {
-    height: 40vh;
+    height: 33vh;
   }
   #footer .fcollection {
     position: absolute;

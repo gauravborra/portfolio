@@ -126,7 +126,10 @@ section{
 
   }
 
+.next:hover {
+cursor: url(/Assets/png/right-arrow.png),40px;
 
+}
 .subtitle{
   margin: 0px;
 }
@@ -184,5 +187,31 @@ font-size: 3vh;
   transition: .3s;
 }
 }
+
+}
+
+
+@media only screen and (max-width: 1024px){
+  .articles{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 3vw;
+    
+    .pleft{
+      text-align: center;
+    }
+    .pright{
+      text-align: center;
+    }
+    .articleheading{
+    font-size: 3vh;
+    }
+    }
+
+  .pheading{
+  font-size: 5vh;
+  overflow-wrap: anywhere;
+  text-align: center;
+  }
 
 }
