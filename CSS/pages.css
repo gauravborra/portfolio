@@ -16,7 +16,7 @@ body {
   padding: 0px;
 }
 
-section {
+.pagebody section {
   padding: 10vh 10vw 10vh 10vw !important;
 }
 

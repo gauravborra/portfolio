@@ -15,9 +15,12 @@ body{
   margin: 0px;
   padding: 0px;
 }
-section{
-  padding: 10vh 10vw 10vh 10vw !important; 
+.pagebody{
+  section{
+    padding: 10vh 10vw 10vh 10vw !important; 
+  }
 }
+
 
 .heropages {
   height: 80vh;

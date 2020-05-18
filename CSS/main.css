@@ -428,6 +428,9 @@ button:hover {
 }
 
 @media only screen and (max-width: 1024px) {
+  .m-hidden {
+    display: none;
+  }
   .heading {
     font-size: 7vh;
     font-family: var(--cormo);
@@ -512,6 +515,9 @@ button:hover {
     text-align: center;
     line-height: 3rem;
   }
+  #who .workgrid {
+    display: none;
+  }
   section {
     padding: 10vh 10vw 6vh 10vw;
   }
@@ -521,20 +527,52 @@ button:hover {
   #what {
     text-align: center;
   }
-  #what .workgrid {
-    margin: 60px 0 60px 0;
-    height: 900px;
+  #what .workgrid div {
+    background-color: var(--mid);
+  }
+  #what .workgrid-m {
+    margin: 60px 0px;
     width: 100%;
     display: -ms-grid;
     display: grid;
-    -ms-grid-rows: 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
+    -ms-grid-rows: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
     -ms-grid-row-align: center;
         align-self: center;
-    grid-gap: 10px;
+    grid-gap: 30px;
   }
-  #what .workgrid div {
-    background-color: var(--mid);
+  #what .workgrid-m .collection {
+    height: 80vw;
+    width: 80vw;
+    background-image: url(/Assets/img/headphone-popup.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    -ms-grid-column-align: center;
+        justify-self: center;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    position: relative;
+  }
+  #what .workgrid-m .collection .colloverlay {
+    background-color: rgba(0, 0, 0, 0.2);
+    position: relative;
+    height: 100%;
+    width: 100%;
+    opacity: 1;
+    -webkit-transition: .3s;
+    transition: .3s;
+  }
+  #what .workgrid-m .collection .colloverlay .title {
+    position: absolute;
+    opacity: 1;
+    color: white;
+    text-align: center;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
   }
   #skills {
     height: 860px;
@@ -685,6 +723,37 @@ button:hover {
         align-self: center;
     text-align: center;
   }
+  #touch {
+    padding: 0vh 0 12vh 0;
+  }
+  #touch span {
+    font-size: 22px;
+    overflow-wrap: break-word;
+  }
+  #touch .heading {
+    -webkit-transform: translateY(-100px);
+            transform: translateY(-100px);
+  }
+  #touch .subhead {
+    display: block;
+    margin: 3vh 0px;
+    padding: 0 3vh;
+  }
+  #touch .touchbg {
+    height: 30vh;
+    width: 100%;
+    text-align: center;
+    background-color: var(--for1);
+    color: var(--background);
+  }
+  #touch .touchbg span {
+    color: var(--primary);
+    overflow-wrap: break-word;
+  }
+  #touch .touchbg h2 {
+    padding: 6vh 3vh;
+    color: var(--background);
+  }
   #footer {
     height: auto;
     color: white;
@@ -711,11 +780,9 @@ button:hover {
     font-family: var(--poppins);
   }
   #footer .fcollection {
-    display: hidden;
+    display: none;
     padding: 5vh 4vw;
     color: var(--background);
-    display: -ms-grid;
-    display: grid;
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
     grid-gap: 20px;
@@ -744,7 +811,6 @@ button:hover {
   }
   #footer #footinfo {
     text-align: center;
-    padding: 5vh 4vw;
     left: 2vw;
     bottom: 1.5vw;
   }
@@ -773,7 +839,6 @@ button:hover {
     display: inline-block;
   }
   footer {
-    height: 20vh;
     color: white;
     text-align: center;
     width: 100%;
@@ -788,6 +853,7 @@ button:hover {
     padding: 4vw 6vw;
   }
   .pagefooter {
+    min-height: 120px;
     position: relative;
   }
   .pagefooter .footinfo {
@@ -883,6 +949,9 @@ button:hover {
 
 /* normal laptops*/
 @media (min-width: 1025px) {
+  .l-hidden {
+    display: none;
+  }
   #aboutme {
     height: 70vh;
     width: 100%;
@@ -984,6 +1053,9 @@ button:hover {
     -ms-grid-column-align: center;
         justify-self: center;
     grid-gap: 10vh;
+  }
+  #what .workgrid-m {
+    display: none;
   }
   .collection {
     height: 35vw;
@@ -1230,7 +1302,7 @@ button:hover {
   }
   #touch {
     padding: 20vh 0 12vh 0;
-    height: 1200px;
+    height: 400px;
   }
   #touch .heading {
     -webkit-transform: translateY(-100px);
@@ -1257,20 +1329,17 @@ button:hover {
     padding: 4vw 6vw;
   }
   #footer {
-    height: 300px;
     color: white;
     background-color: var(--for1);
     margin: 0px;
     padding: 0px;
     text-align: center;
     font-family: var(--poppins);
+    text-align: center;
   }
   #footer .social {
-    position: absolute;
     display: inline-block;
-    top: 4vh;
-    -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
+    margin: 1vw;
   }
   #footer .ficon {
     fill: var(--background);
@@ -1317,13 +1386,30 @@ button:hover {
     font-weight: 300;
     letter-spacing: 2px;
   }
-  #footer #footinfo {
+  #footer #footinfo svg {
+    width: 20px;
+    height: 20px;
+    margin: 20px;
+    fill: var(--background);
+  }
+  #footer #footinfo .social {
+    display: inline-block;
+    right: 20px;
+  }
+  #footer #footinfo .ficon {
+    fill: var(--background);
+    height: auto;
+    width: 20px;
+    margin: 15px;
+  }
+  #footer #footinfo .ficon:hover {
+    fill: var(--primary);
+  }
+  #footer #footinfo #footinfo {
     text-align: left;
     position: absolute;
-    left: 2vw;
-    bottom: 1.5vw;
   }
-  #footer #footinfo div {
+  #footer #footinfo #footinfo div {
     margin: 6px;
   }
   #footer #footinfo .phoneicon {
@@ -1435,7 +1521,7 @@ button:hover {
     grid-gap: 20px;
   }
   #footer {
-    height: 33vh;
+    min-height: 26vh;
   }
   #footer .fcollection {
     position: absolute;
