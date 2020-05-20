@@ -63,8 +63,8 @@
 
   </section>
   <section id="what">
-    <H1 class="heading">What I do ?</H1>
-    <h2 class="subhead">I am a Problem Solver<br>
+    <H1 class="headingb">What I do ?</H1>
+    <h2 class="subhead higher">I am a Problem Solver<br>
       I make difficult things EASIER & Impossible things POSSIBLE</h2>
 
 
@@ -103,7 +103,7 @@
   </section> 
   <section id="skills">
     <H1 class="heading">Skills & Softwares</H1>
-    <h2 class="subhead">Skills that I have acquired over the years</h2>
+    <h2 class="subhead higher">Skills that I have acquired over the years</h2>
     
     <div id="skill" class="higher">
           <div  class="skill">
@@ -194,7 +194,7 @@
 
   </section> 
   <section id="softwares">
-    <h2 class="subhead">Softwares I am familiar with</h2>
+    <h2 class="subhead higher">Softwares I am familiar with</h2>
     
     <div id="software" >
           <!--  
@@ -255,7 +255,7 @@
     <H1 class="heading">Things I Love to do</H1>
     <h2 class="subhead">Things I love doing when I am not working</h2>    
     
-    <div id="hobbies">
+    <div id="hobbies" class="higher">
       <div class="hobby">
         <div class="hobbypic"> 
      
@@ -303,15 +303,15 @@
   </section> 
   <section id="touch">
     <H1 class="heading">Get in Touch</H1>
-    <h2 class="subhead">I crave for a design challenge and enjoy discussing new design projects</h2>
-  <div class="touchbg">
+    <h2 class="subhead higher">I crave for a design challenge and enjoy discussing new design projects</h2>
+  <div class="touchbg higher">
     <h2 class="subhead">Have a project or<br> an Idea in mind?<br>
     <a href="mailto:design@gauravborra.com"><span>design@gauravborra.com</span></a>
   </div>
-<h2 class="subhead">or if you wanna hire me or just wanna say Hi! <br><a href="mailto:connect@gauravborra.com"><span>connect@gauravborra.com</span> </a></h2>
+<h2 class="subhead higher">or if you wanna hire me or just wanna say Hi! <br><a href="mailto:connect@gauravborra.com"><span>connect@gauravborra.com</span> </a></h2>
   </section> 
 
-  <div id="insta">
+  <div id="insta" clas="higher">
     <h2 class="subhead">Connect me on Instagram</h2>  
     <script src="https://apps.elfsight.com/p/platform.js" defer></script>
     <div class="elfsight-app-862f94b1-ee86-4120-8dd2-d04894ed3dbb"></div>
@@ -401,12 +401,29 @@ preload.classList.add('prelaod-end');
 		var parallax = new Parallax(scene);
     </script>
   
+  <script>
+    var current = $(window).scrollTop();
+    var total = $(window).height() - current;
+    var ele = $(".headingb");
+    var currPosition = ele.position().left + 360;
+    var trackLength = 300;
+$(window).scroll(function (event) {
+    current = $(window).scrollTop();
+    console.log({total:total,current:current});
+    console.log(current/total * 100);
+    var newPosition = trackLength * (current/total)
+    ele.css({left:currPosition+newPosition+'px'});
+});
+
+  </script>
 <script>
     // Center all the things!
     var rellax = new Rellax('.rellax', {
       center: true
     });
   </script>
+
+
    <script src="/JS/mousemoveparallax.js"></script>
     <script src="/JS/vanilla-tilt.min.js"></script>   
     <script src="/JS/rellax.min.js"></script>
