@@ -24,7 +24,7 @@
     width: 2rem;
     height: 2rem;
     border: 1px solid #777;
-    transition: transform .5s ease, opacity .35s ease;
+    transition: transform .5s ease, opacity .35s ease-out;
   }
   
   &.is-active{

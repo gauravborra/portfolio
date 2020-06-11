@@ -18,6 +18,88 @@ html,body {
   padding: 0px;
 }
 
+.cursormain{
+height: 3rem;
+width: 3rem;
+border: 2px solid var(--primary);
+border-radius: 50%;
+position: absolute;
+transform: translate(-50%,-50%);
+transform-origin: center;
+z-index: 50;
+transition: all .1s;
+pointer-events: none;
+transform-origin: 50% 50%;
+mix-blend-mode: exclusion;
+p{
+opacity: 0;
+}
+}
+
+
+.link-grow{
+  transform: scale(3);
+  background-color:var(--primary);
+  transform-origin: 70% 70%;
+  transform-origin: center;
+  mix-blend-mode: normal;
+  animation: pulse2 0.5s  infinite  alternate ;
+  @keyframes pulse2{
+    from{
+      ;
+     box-shadow: 0px 0px 0px 0px rgba(127, 218, 9, 1) ;
+    }
+    to{
+      box-shadow: 0px 0px 0px 10px rgba(127, 218, 9, .5)  ;
+    }
+  }
+  
+}
+.hovered-link{
+transform: scale(1.2);
+color:white;
+z-index:100;
+
+}
+
+.icon-grow{
+  transform: scale(2);
+  transform-origin: 100% 100%;
+  background-color:var(--primary);
+  mix-blend-mode: normal;
+  border:none;
+  animation: pulse infinite 1s;
+  animation-direction:alternate;
+  @keyframes pulse{
+    from{
+      ;
+     box-shadow: 0px 0px 0px 0px rgba(127, 218, 9, 1) ;
+    }
+    to{
+      box-shadow: 0px 0px 0px 10px rgba(127, 218, 9, .5)  ;
+    }
+  }
+}
+
+.hovered-icon{
+  transform: scale(1.5);
+  position: relative;
+  z-index:100;
+  
+}
+
+.ripple{
+  animation: pulse 0.5s  2 alternate ;
+  @keyframes pulse{
+    from{
+      ;
+     box-shadow: 0px 0px 0px 0px rgba(127, 218, 9, 1) ;
+    }
+    to{
+      box-shadow: 0px 0px 0px 10px rgba(127, 218, 9, .5)  ;
+    }
+  }
+}
 
 a,
 a:hover,
@@ -25,11 +107,12 @@ a:focus,
 a:active {
   text-decoration: none;
   color: inherit;
+  cursor: none;
 }
 
 a:hover{
-  color:var(--primary);
   transition: .4s;
+  color: white;
 }
 
 
@@ -164,8 +247,13 @@ transition: .2s;
     color: white;
     letter-spacing: 3px;
 
+    .heromenu:hover{
+      color: white;
+
+
+    }
     #resume:hover {
-      color: var(--primary);
+      // color: var(--primary);
       transform: scale(1.5);
     }
   }
@@ -270,7 +358,6 @@ transition: .2s;
 // WHO
 #who {
   height: auto;
-  background-color: var(--background);
   position: relative;
 
   #mydp {
@@ -734,7 +821,8 @@ transition: .2s;
       width: 100%;
     }
     .ficon {
-      fill: var(--primary);
+      fill:white;
+      // fill: var(--primary);
       height: auto;
       width: 20px;
       margin: 6vh 10px;
@@ -850,7 +938,8 @@ transition: .2s;
       margin: 15px;
     }
     .ficon:hover {
-      fill: var(--primary);
+      // fill: var(--primary);
+      fill: white;
     }
   
   }
@@ -969,7 +1058,7 @@ transition: .2s;
 
   #hero {
     span:hover {
-      color: var(--primary);
+      // color: var(--primary);
     }
     .siconhero{
     height: auto;
@@ -1296,7 +1385,8 @@ padding:8vh;
       margin: 20px;
     }
     .ficon:hover {
-      fill: var(--primary);
+      // fill: var(--primary);
+      
     }
 
     h4 {

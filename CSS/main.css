@@ -18,18 +18,143 @@ html, body {
   padding: 0px;
 }
 
+.cursormain {
+  height: 3rem;
+  width: 3rem;
+  border: 2px solid var(--primary);
+  border-radius: 50%;
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  z-index: 50;
+  -webkit-transition: all .1s;
+  transition: all .1s;
+  pointer-events: none;
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+  mix-blend-mode: exclusion;
+}
+
+.cursormain p {
+  opacity: 0;
+}
+
+.link-grow {
+  -webkit-transform: scale(3);
+          transform: scale(3);
+  background-color: var(--primary);
+  -webkit-transform-origin: 70% 70%;
+          transform-origin: 70% 70%;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  mix-blend-mode: normal;
+  -webkit-animation: pulse2 0.5s  infinite  alternate;
+          animation: pulse2 0.5s  infinite  alternate;
+}
+
+@-webkit-keyframes pulse2 {
+  from {
+    -webkit-box-shadow: 0px 0px 0px 0px #7fda09;
+            box-shadow: 0px 0px 0px 0px #7fda09;
+  }
+  to {
+    -webkit-box-shadow: 0px 0px 0px 10px rgba(127, 218, 9, 0.5);
+            box-shadow: 0px 0px 0px 10px rgba(127, 218, 9, 0.5);
+  }
+}
+
+@keyframes pulse2 {
+  from {
+    -webkit-box-shadow: 0px 0px 0px 0px #7fda09;
+            box-shadow: 0px 0px 0px 0px #7fda09;
+  }
+  to {
+    -webkit-box-shadow: 0px 0px 0px 10px rgba(127, 218, 9, 0.5);
+            box-shadow: 0px 0px 0px 10px rgba(127, 218, 9, 0.5);
+  }
+}
+
+.hovered-link {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  color: white;
+  z-index: 100;
+}
+
+.icon-grow {
+  -webkit-transform: scale(2);
+          transform: scale(2);
+  -webkit-transform-origin: 100% 100%;
+          transform-origin: 100% 100%;
+  background-color: var(--primary);
+  mix-blend-mode: normal;
+  border: none;
+  -webkit-animation: pulse infinite 1s;
+          animation: pulse infinite 1s;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+}
+
+@-webkit-keyframes pulse {
+  from {
+    -webkit-box-shadow: 0px 0px 0px 0px #7fda09;
+            box-shadow: 0px 0px 0px 0px #7fda09;
+  }
+  to {
+    -webkit-box-shadow: 0px 0px 0px 10px rgba(127, 218, 9, 0.5);
+            box-shadow: 0px 0px 0px 10px rgba(127, 218, 9, 0.5);
+  }
+}
+
+@keyframes pulse {
+  from {
+    -webkit-box-shadow: 0px 0px 0px 0px #7fda09;
+            box-shadow: 0px 0px 0px 0px #7fda09;
+  }
+  to {
+    -webkit-box-shadow: 0px 0px 0px 10px rgba(127, 218, 9, 0.5);
+            box-shadow: 0px 0px 0px 10px rgba(127, 218, 9, 0.5);
+  }
+}
+
+.hovered-icon {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+  position: relative;
+  z-index: 100;
+}
+
+.ripple {
+  -webkit-animation: pulse 0.5s  2 alternate;
+          animation: pulse 0.5s  2 alternate;
+}
+
+@keyframes pulse {
+  from {
+    -webkit-box-shadow: 0px 0px 0px 0px #7fda09;
+            box-shadow: 0px 0px 0px 0px #7fda09;
+  }
+  to {
+    -webkit-box-shadow: 0px 0px 0px 10px rgba(127, 218, 9, 0.5);
+            box-shadow: 0px 0px 0px 10px rgba(127, 218, 9, 0.5);
+  }
+}
+
 a,
 a:hover,
 a:focus,
 a:active {
   text-decoration: none;
   color: inherit;
+  cursor: none;
 }
 
 a:hover {
-  color: var(--primary);
   -webkit-transition: .4s;
   transition: .4s;
+  color: white;
 }
 
 .higher {
@@ -201,8 +326,11 @@ button:hover {
   letter-spacing: 3px;
 }
 
+#hero .heromenu .heromenu:hover {
+  color: white;
+}
+
 #hero .heromenu #resume:hover {
-  color: var(--primary);
   -webkit-transform: scale(1.5);
           transform: scale(1.5);
 }
@@ -312,7 +440,6 @@ button:hover {
 
 #who {
   height: auto;
-  background-color: var(--background);
   position: relative;
 }
 
@@ -795,7 +922,7 @@ button:hover {
     width: 100%;
   }
   #footer .ficon {
-    fill: var(--primary);
+    fill: white;
     height: auto;
     width: 20px;
     margin: 6vh 10px;
@@ -909,7 +1036,7 @@ button:hover {
     margin: 15px;
   }
   .pagefooter .ficon:hover {
-    fill: var(--primary);
+    fill: white;
   }
 }
 
@@ -1034,9 +1161,6 @@ button:hover {
     -webkit-transform: translateY(5px);
     transform: translateY(5px);
     /* move the element down by 5px (it will stay in place because it's attached to the element that also moves up 5px) */
-  }
-  #hero span:hover {
-    color: var(--primary);
   }
   #hero .siconhero {
     height: auto;
@@ -1372,9 +1496,6 @@ button:hover {
     height: auto;
     width: 25px;
     margin: 20px;
-  }
-  #footer .ficon:hover {
-    fill: var(--primary);
   }
   #footer h4 {
     font-size: 16px;
