@@ -11,6 +11,40 @@
   --cormo: "Cormorant Garamond", serif;
 }
 
+.cursor {
+  position: fixed;
+  top: -1rem;
+  left: -1rem;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 1000;
+}
+
+.cursor div {
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+  border: 1px solid #777;
+  -webkit-transition: opacity .35s ease, -webkit-transform .5s ease;
+  transition: opacity .35s ease, -webkit-transform .5s ease;
+  transition: transform .5s ease, opacity .35s ease;
+  transition: transform .5s ease, opacity .35s ease, -webkit-transform .5s ease;
+}
+
+.cursor.is-active div {
+  -webkit-transform: scale(2.5);
+          transform: scale(2.5);
+  opacity: 0.25;
+}
+
+.txt {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
+}
+
 /* normal laptops*/
 @media (min-width: 1025px) {
   #projects {

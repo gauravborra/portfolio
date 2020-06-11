@@ -10,6 +10,42 @@
   --poppins: "Poppins", sans-serif;
   --cormo: "Cormorant Garamond", serif;
 }
+
+.cursor{
+  position: fixed;
+  top: -1rem;
+  left: -1rem;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 1000;
+  
+  div{
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+    border: 1px solid #777;
+    transition: transform .5s ease, opacity .35s ease;
+  }
+  
+  &.is-active{
+    
+    div{
+      transform: scale(2.5);
+      opacity: 0.25;
+    }
+  }
+}
+
+.txt{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+
+
+
 /* normal laptops*/
 @media (min-width: 1025px){
  
@@ -335,9 +371,5 @@ button{
   }
   }
   } 
- 
-  
-
-
 
 }

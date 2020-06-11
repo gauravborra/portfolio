@@ -55,6 +55,7 @@ H3 {
 .subtitle {
   font-family: var(--poppins);
   font-size: 2.5vh;
+  margin : 1vw
 }
 
 .pad {
@@ -63,6 +64,8 @@ H3 {
 section{
   position: relative;
   padding: 20vh 10vw 12vh 10vw;
+  overflow: hidden;
+
 }
 
 .heading {
@@ -75,19 +78,20 @@ section{
   position: absolute;
   white-space: nowrap;
   top: 1vh;
-  right: 10vw;
+  left: 10vw;
+
+}
+.headingskills{
+right: -200vw;
+}
+
+.headingtouch{
+  top: 6vh;
+  left: -500px;
+
 }
 .headingb {
-  font-family: var(--cormo);
-  font-size: 20vh;
-  margin: 0px;
-  font-style: italic;
-  font-weight: 300;;
   color: var(--for1);
-  position: absolute;
-  white-space: nowrap;
-  top: 1vh;
-  right: 10vw;
 }
 .subhead {
   font-family: var(--poppins);
@@ -1242,7 +1246,7 @@ transition: .2s;
   }
   #touch{
     padding: 20vh 0 12vh 0;
-    height: 400px;
+    height: 540px;
 
  
   .heading{
@@ -1466,7 +1470,7 @@ svg{
 
 
   #skills {
-    min-height: 600px;
+    min-height: 440px;
     position: relative;
     H2 {
       display: block;

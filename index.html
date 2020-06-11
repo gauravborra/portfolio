@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="/CSS/main.css">
     <link rel="stylesheet" href="/CSS/mousemove_parallax.css">
     <link rel="stylesheet" href="/CSS/preload.css">
-    <link rel="stylesheet" href="/CSS/pages.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond&display=swap" rel="stylesheet">
@@ -19,6 +19,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
   </head>
   <body>
@@ -54,7 +55,7 @@
     <H1 class="heading">Who am I ?</H1>
     <div id="aboutme" class="higher">
      
-      <div id="mydp" class="higher"></div>
+      <div id="mydp" class="higher" data-aos="fade-right"></div>
      
       <div class="aboutme"> 
         <p class="subhead higher"> I am a Designer with main focus on PRODUCT DESIGN,INTERACTION DESIGN and BRANDING</p> 
@@ -63,7 +64,7 @@
 
   </section>
   <section id="what">
-    <H1 class="headingb">What I do ?</H1>
+    <H1 class="heading headingb">What I do ?</H1>
     <h2 class="subhead higher">I am a Problem Solver<br>
       I make difficult things EASIER & Impossible things POSSIBLE</h2>
 
@@ -102,7 +103,7 @@
 
   </section> 
   <section id="skills">
-    <H1 class="heading">Skills & Softwares</H1>
+    <H1 class="heading headingskills">Skills & Softwares</H1>
     <h2 class="subhead higher">Skills that I have acquired over the years</h2>
     
     <div id="skill" class="higher">
@@ -257,8 +258,7 @@
     
     <div id="hobbies" class="higher">
       <div class="hobby">
-        <div class="hobbypic"> 
-     
+        <div class="hobbypic" data-aos="fade-right"  data-aos-duration="1000"> 
         </div>
 
         <div class="hobbyinfo"> 
@@ -269,7 +269,7 @@
         </div>
       </div>
       <div class="hobby">
-        <div class="hobbypic"> </div>
+        <div class="hobbypic" data-aos="fade-left"  data-aos-duration="1000"> </div>
         <div class="hobbyinfo">
           <H1 class="title">Photography</H1> 
           <H4 class="subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, quaerat?</H4>
@@ -279,7 +279,7 @@
 
 
       <div class="hobby">
-        <div class="hobbypic"> </div>
+        <div class="hobbypic" data-aos="fade-right"  data-aos-duration="1000"> </div>
         <div class="hobbyinfo"> 
           <H1 class="title">DIY</H1> 
          <H4 class="subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, quaerat?</H4>
@@ -288,7 +288,7 @@
         </div>
       </div>
       <div class="hobby">
-        <div class="hobbypic"> </div>
+        <div class="hobbypic" data-aos="fade-left"  data-aos-duration="1000"> </div>
         <div class="hobbyinfo"> 
           <H1 class="title">Photography</H1> 
          <H4 class="subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, quaerat?</H4>
@@ -302,10 +302,10 @@
 
   </section> 
   <section id="touch">
-    <H1 class="heading">Get in Touch</H1>
+    <H1 class="heading headingtouch">Get in Touch</H1>
     <h2 class="subhead higher">I crave for a design challenge and enjoy discussing new design projects</h2>
   <div class="touchbg higher">
-    <h2 class="subhead">Have a project or<br> an Idea in mind?<br>
+    <h2 class="subhead">Have a project or an Idea in mind?<br>
     <a href="mailto:design@gauravborra.com"><span>design@gauravborra.com</span></a>
   </div>
 <h2 class="subhead higher">or if you wanna hire me or just wanna say Hi! <br><a href="mailto:connect@gauravborra.com"><span>connect@gauravborra.com</span> </a></h2>
@@ -393,9 +393,6 @@ const preload=document.querySelector('.preload');
 preload.classList.add('prelaod-end');  
 
 });
-</script>
--->
- 
     <script>
 		var scene = document.getElementById('scene');
 		var parallax = new Parallax(scene);
@@ -416,6 +413,30 @@ $(window).scroll(function (event) {
 });
 
   </script>
+
+</script>
+
+ 
+    <script>
+		var scene = document.getElementById('scene');
+		var parallax = new Parallax(scene);
+    </script>
+  -->
+  <script>
+    var current = $(window).scrollTop();
+    var total = $(window).height() - current;
+    var ele = $(".heading");
+    var currPosition = ele.position().left + 10;
+    var trackLength = 100;
+$(window).scroll(function (event) {
+    current = $(window).scrollTop();
+    console.log({total:total,current:current});
+    console.log(current/total * 100);
+    var newPosition = trackLength * (current/total)
+    ele.css({left:currPosition+newPosition+'px'});
+});
+  </script>
+
 <script>
     // Center all the things!
     var rellax = new Rellax('.rellax', {
@@ -424,13 +445,18 @@ $(window).scroll(function (event) {
   </script>
 
 
+
+
    <script src="/JS/mousemoveparallax.js"></script>
     <script src="/JS/vanilla-tilt.min.js"></script>   
     <script src="/JS/rellax.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.7.2/rellax.min.js"></script>
     <script src="/JS/particle.js"></script>
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html> 
