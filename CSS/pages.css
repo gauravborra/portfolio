@@ -35,7 +35,9 @@ body {
   font-family: var(--poppins);
   font-size: 3vw;
   color: white;
-  padding: 20px;
+  position: absolute;
+  left: 20px;
+  top: 20px;
 }
 
 .heropages .heromenu {
@@ -215,6 +217,7 @@ body {
 #scicomm .next {
   background-color: var(--for1);
   color: var(--background);
+  cursor: e-resize;
 }
 
 #scicomm .next h3 {
@@ -229,6 +232,7 @@ body {
   color: var(--primary);
   -webkit-transition: .3s;
   transition: .3s;
+  cursor: e-resize;
 }
 
 @media only screen and (max-width: 1024px) {

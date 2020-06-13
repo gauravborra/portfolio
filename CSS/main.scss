@@ -16,33 +16,74 @@ html,body {
   width: 100%;
   margin: 0px;
   padding: 0px;
+  cursor: none !important;;
+  background-color: var(--background);
 }
 
 .cursormain{
-height: 3rem;
-width: 3rem;
-border: 2px solid var(--primary);
+height: 32px;
+width: 32px;
+// border: 2px solid var(--primary);
+border: 2px solid white;
 border-radius: 50%;
 position: absolute;
 transform: translate(-50%,-50%);
-transform-origin: center;
 z-index: 50;
 transition: all .1s;
 pointer-events: none;
-transform-origin: 50% 50%;
-mix-blend-mode: exclusion;
-p{
+mix-blend-mode: difference;
+  p{
+  opacity: 0;
+  }
+}
+
+.cursormainhide{
+  opacity: 0;
+}
+.cursorsmall{
+ height: 6px;
+ width: 6px;
+ border-radius:50%;
+ position: absolute;
+ background-color: var(--primary);
+ transform: translate(-50%,-50%);
+ mix-blend-mode: difference;
+ z-index: 50;
+ pointer-events: none;
+}
+
+
+.cursorsmallhide{
 opacity: 0;
 }
+
+.glowcursor{
+  height: 128px;
+  width: 128px;
+ background-color:var(--primary);
+ border-radius: 50%; 
+ position:absolute;
+ transform: translate(-50%,-50%);
+ mix-blend-mode: screen;
+ z-index: 1;
+ pointer-events: none;
+ opacity: 0;
 }
 
+.glowcursorshow{
+  opacity: 1;
+}
 
-.link-grow{
-  transform: scale(3);
+.navlink-grow{
+  height: 10rem;
+  width: 10rem;
   background-color:var(--primary);
-  transform-origin: 70% 70%;
+  // background-color:white;
+  border: none;
   transform-origin: center;
   mix-blend-mode: normal;
+  // mix-blend-mode: difference;
+  
   animation: pulse2 0.5s  infinite  alternate ;
   @keyframes pulse2{
     from{
@@ -50,15 +91,18 @@ opacity: 0;
      box-shadow: 0px 0px 0px 0px rgba(127, 218, 9, 1) ;
     }
     to{
-      box-shadow: 0px 0px 0px 10px rgba(127, 218, 9, .5)  ;
+      box-shadow: 0px 0px 0px 20px rgba(127, 218, 9, .5)  ;
     }
   }
   
 }
-.hovered-link{
+.hovered-navlink{
 transform: scale(1.2);
 color:white;
-z-index:100;
+z-index: 100;
+animation: rotatelink 5s linear infinite;
+
+
 
 }
 
@@ -68,6 +112,7 @@ z-index:100;
   background-color:var(--primary);
   mix-blend-mode: normal;
   border:none;
+  z-index: 40;
   animation: pulse infinite 1s;
   animation-direction:alternate;
   @keyframes pulse{
@@ -100,26 +145,52 @@ z-index:100;
     }
   }
 }
+.viewcursor-hover{
+  height: 96px;
+  width: 96px;
+  background-color: var(--background);
+  border: none;
+  mix-blend-mode: normal;
+  p{
+    opacity:1;
+    font-family: var(--poppins);
+    font-size: 16px;
+    letter-spacing: 6px; 
+    padding: 0px;
+    margin: 0px;
+    position: absolute;
+    z-index: 100;
+    transform: translate(21px,38px);
+  }
+
+}
+.link-grow{
+  height: 64px;
+  width: 64px;
+  transition: .4s;
+  transition-property: height, width;
+}
+.buttonlink{
+  cursor: none;
+}
+
+
 
 a,
 a:hover,
 a:focus,
 a:active {
-  text-decoration: none;
+  text-decoration: none !important ;
   color: inherit;
   cursor: none;
 }
 
 a:hover{
   transition: .4s;
-  color: white;
+
 }
 
 
-.higher {
-  position: relative;
-  z-index: 10;
-}
 p {
   font-family: var(--poppins);
 }
@@ -161,18 +232,14 @@ section{
   position: absolute;
   white-space: nowrap;
   top: 1vh;
-  left: 10vw;
+  left: 50%;
+  transform: translateX(-50%);
 
 }
-.headingskills{
-right: -200vw;
-}
 
-.headingtouch{
-  top: 6vh;
-  left: -500px;
 
-}
+
+
 .headingb {
   color: var(--for1);
 }
@@ -185,6 +252,7 @@ right: -200vw;
 }
 
 button {
+  cursor: none !important;
   height: 6vh;
   background-color: white;
   width: 20vw;
@@ -234,13 +302,13 @@ transition: .2s;
 
   #logo {
     font-family: var(--poppins);
-  
     font-size: 3vw;
     color: white;
     padding: 20px;
   }
   .heromenu {
     position: absolute;
+    padding: 10px;
     font-family: var(--poppins);
     font-weight: 500;
     font-size: 1 rem;
@@ -258,13 +326,13 @@ transition: .2s;
     }
   }
   #resume {
-    top: 20px;
-    right: 20px;
+    top: 10px;
+    right: 10px;
   }
   #Work {
     position: absolute;
     top: 51vh;
-    left: 0px;
+    left: -10px;
     transform: rotate(90deg);
   }
   #scrolltext {
@@ -344,15 +412,16 @@ transition: .2s;
   #About {
     position: absolute;
     top: 49vh;
-    right: -20px;
+    right: -30px;
     transform: rotate(-90deg);
   }
 
   #contact {
     position: absolute;
-    bottom: 20px;
+    bottom: 10px;
     left: 50%;
     transform: translateX(-50%);
+    transform-origin: center;
   }
 }
 // WHO
@@ -511,6 +580,7 @@ transition: .2s;
   button {
     width: 80vw;
     height: 8vh;
+    display: none;
    
   }
   .buttondark {
@@ -534,7 +604,7 @@ transition: .2s;
     font-family: var(--poppins);
     color: var(--for);
     text-align: center;
-    margin: 60px 0 30px 0;
+    margin: 30px 0 30px 0;
   }
   #hero {
     height:100vh;
@@ -640,7 +710,7 @@ transition: .2s;
 
   }
   #skills {
-    height: 860px;
+    min-height: 600px;
     position: relative;
   }
   #skill {
@@ -774,15 +844,12 @@ transition: .2s;
   }
 
   #touch{
-  padding: 0vh 0 12vh 0;
+  padding: 6vh 0 12vh 0;
   span{
     font-size: 22px;
     overflow-wrap: break-word;
   }
-
-  .heading{
-  transform: translateY(-100px);
-  }     
+   
   .subhead{
     display: block;
     margin:3vh 0px;
@@ -1077,10 +1144,12 @@ transition: .2s;
   }
 
   #who {
+    
     .subhead {
       text-align: left;
       justify-self: center;
       align-self: center;;
+      
     }
     .aboutme {
     height: 100%;
@@ -1088,7 +1157,6 @@ transition: .2s;
     }
     p {
       display: inline-block;
-      margin: 0px;
       padding: 60px;
     }
 
@@ -1149,14 +1217,9 @@ transition: .2s;
     .collection:hover .colloverlay {
       opacity: 1;
      } 
-    
-      
-      
-
   
-
   #skills {
-    min-height: 800px;
+    min-height: 460px;
     position: relative;
     H2 {
       display: block;
@@ -1170,20 +1233,21 @@ transition: .2s;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-auto-rows: auto;
     grid-gap: 20px;
+    H3 {
+      display: inline-block;
+      vertical-align: middle;
+      font-size: 2vh;
+      margin: 30px 0 30px 0px;
+    }
   }
   .skill {
     position: relative;
-    height: 10vh;
+    height: 16vh;
     width: auto;
     align-self: center;
     text-align: start;
 
-    H3 {
-      display: inline-block;
-      vertical-align: middle;
-      font-size: 10vw;
-      margin: 30px 0 30px 0px;
-    }
+  
     .skillhide {
       position: absolute;
       height: 10px;
@@ -1251,7 +1315,7 @@ transition: .2s;
   }
 
   #softwares {
-    height: 660px;
+    height: 680px;
   }
 
   #software {
@@ -1271,8 +1335,10 @@ transition: .2s;
 
   #love {
     position: relative;
-    min-height:3600px; 
-
+    min-height:2750px; 
+    button {
+      visibility: hidden;
+    }
     .button {
       visibility: hidden;
     }
@@ -1334,13 +1400,12 @@ transition: .2s;
 
   }
   #touch{
-    padding: 20vh 0 12vh 0;
-    height: 540px;
-
+    padding: 20vh 0 0 0;
+    min-height: 300px;
+  
+   
  
-  .heading{
-  transform: translateY(-100px);
-}
+ 
   .subhead{
     display: block;
     margin:3vh;
@@ -1362,7 +1427,7 @@ padding:8vh;
 
   } 
   #insta {
-    padding: 4vw 6vw;
+    padding: 0vw 6vw 4vw 6vw;
   }
 
   #footer {
@@ -1575,6 +1640,10 @@ svg{
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-auto-rows: auto;
     grid-gap: 20px;
+
+    .skill{
+    height: 12vh;
+    }
   }
 
 #footer{

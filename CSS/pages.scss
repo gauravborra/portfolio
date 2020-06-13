@@ -36,7 +36,9 @@ body{
     font-family: var(--poppins);
     font-size: 3vw;
     color: white;
-    padding: 20px;
+    position: absolute;
+    left: 20px;
+    top:20px;
   }
   .heromenu {
     position: absolute;
@@ -179,6 +181,7 @@ font-size: 3vh;
 .next{
   background-color: var(--for1);
   color: var(--background);
+  cursor: e-resize;
   h3{
     text-align: center;;
   }
@@ -188,6 +191,7 @@ font-size: 3vh;
 .pheading:hover{
   color: var(--primary);
   transition: .3s;
+  cursor: e-resize;
 }
 }
 

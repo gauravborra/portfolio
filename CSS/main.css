@@ -16,37 +16,73 @@ html, body {
   width: 100%;
   margin: 0px;
   padding: 0px;
+  cursor: none !important;
+  background-color: var(--background);
 }
 
 .cursormain {
-  height: 3rem;
-  width: 3rem;
-  border: 2px solid var(--primary);
+  height: 32px;
+  width: 32px;
+  border: 2px solid white;
   border-radius: 50%;
   position: absolute;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  -webkit-transform-origin: center;
-          transform-origin: center;
   z-index: 50;
   -webkit-transition: all .1s;
   transition: all .1s;
   pointer-events: none;
-  -webkit-transform-origin: 50% 50%;
-          transform-origin: 50% 50%;
-  mix-blend-mode: exclusion;
+  mix-blend-mode: difference;
 }
 
 .cursormain p {
   opacity: 0;
 }
 
-.link-grow {
-  -webkit-transform: scale(3);
-          transform: scale(3);
+.cursormainhide {
+  opacity: 0;
+}
+
+.cursorsmall {
+  height: 6px;
+  width: 6px;
+  border-radius: 50%;
+  position: absolute;
   background-color: var(--primary);
-  -webkit-transform-origin: 70% 70%;
-          transform-origin: 70% 70%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  mix-blend-mode: difference;
+  z-index: 50;
+  pointer-events: none;
+}
+
+.cursorsmallhide {
+  opacity: 0;
+}
+
+.glowcursor {
+  height: 128px;
+  width: 128px;
+  background-color: var(--primary);
+  border-radius: 50%;
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  mix-blend-mode: screen;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0;
+}
+
+.glowcursorshow {
+  opacity: 1;
+}
+
+.navlink-grow {
+  height: 10rem;
+  width: 10rem;
+  background-color: var(--primary);
+  border: none;
   -webkit-transform-origin: center;
           transform-origin: center;
   mix-blend-mode: normal;
@@ -60,8 +96,8 @@ html, body {
             box-shadow: 0px 0px 0px 0px #7fda09;
   }
   to {
-    -webkit-box-shadow: 0px 0px 0px 10px rgba(127, 218, 9, 0.5);
-            box-shadow: 0px 0px 0px 10px rgba(127, 218, 9, 0.5);
+    -webkit-box-shadow: 0px 0px 0px 20px rgba(127, 218, 9, 0.5);
+            box-shadow: 0px 0px 0px 20px rgba(127, 218, 9, 0.5);
   }
 }
 
@@ -71,16 +107,18 @@ html, body {
             box-shadow: 0px 0px 0px 0px #7fda09;
   }
   to {
-    -webkit-box-shadow: 0px 0px 0px 10px rgba(127, 218, 9, 0.5);
-            box-shadow: 0px 0px 0px 10px rgba(127, 218, 9, 0.5);
+    -webkit-box-shadow: 0px 0px 0px 20px rgba(127, 218, 9, 0.5);
+            box-shadow: 0px 0px 0px 20px rgba(127, 218, 9, 0.5);
   }
 }
 
-.hovered-link {
+.hovered-navlink {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
   color: white;
   z-index: 100;
+  -webkit-animation: rotatelink 5s linear infinite;
+          animation: rotatelink 5s linear infinite;
 }
 
 .icon-grow {
@@ -91,6 +129,7 @@ html, body {
   background-color: var(--primary);
   mix-blend-mode: normal;
   border: none;
+  z-index: 40;
   -webkit-animation: pulse infinite 1s;
           animation: pulse infinite 1s;
   -webkit-animation-direction: alternate;
@@ -142,11 +181,45 @@ html, body {
   }
 }
 
+.viewcursor-hover {
+  height: 96px;
+  width: 96px;
+  background-color: var(--background);
+  border: none;
+  mix-blend-mode: normal;
+}
+
+.viewcursor-hover p {
+  opacity: 1;
+  font-family: var(--poppins);
+  font-size: 16px;
+  letter-spacing: 6px;
+  padding: 0px;
+  margin: 0px;
+  position: absolute;
+  z-index: 100;
+  -webkit-transform: translate(21px, 38px);
+          transform: translate(21px, 38px);
+}
+
+.link-grow {
+  height: 64px;
+  width: 64px;
+  -webkit-transition: .4s;
+  transition: .4s;
+  -webkit-transition-property: height, width;
+  transition-property: height, width;
+}
+
+.buttonlink {
+  cursor: none;
+}
+
 a,
 a:hover,
 a:focus,
 a:active {
-  text-decoration: none;
+  text-decoration: none !important;
   color: inherit;
   cursor: none;
 }
@@ -154,12 +227,6 @@ a:active {
 a:hover {
   -webkit-transition: .4s;
   transition: .4s;
-  color: white;
-}
-
-.higher {
-  position: relative;
-  z-index: 10;
 }
 
 p {
@@ -204,16 +271,9 @@ section {
   position: absolute;
   white-space: nowrap;
   top: 1vh;
-  left: 10vw;
-}
-
-.headingskills {
-  right: -200vw;
-}
-
-.headingtouch {
-  top: 6vh;
-  left: -500px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 .headingb {
@@ -228,6 +288,7 @@ section {
 }
 
 button {
+  cursor: none !important;
   height: 6vh;
   background-color: white;
   width: 20vw;
@@ -319,6 +380,7 @@ button:hover {
 
 #hero .heromenu {
   position: absolute;
+  padding: 10px;
   font-family: var(--poppins);
   font-weight: 500;
   font-size: 1 rem;
@@ -336,14 +398,14 @@ button:hover {
 }
 
 #hero #resume {
-  top: 20px;
-  right: 20px;
+  top: 10px;
+  right: 10px;
 }
 
 #hero #Work {
   position: absolute;
   top: 51vh;
-  left: 0px;
+  left: -10px;
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
 }
@@ -425,17 +487,19 @@ button:hover {
 #hero #About {
   position: absolute;
   top: 49vh;
-  right: -20px;
+  right: -30px;
   -webkit-transform: rotate(-90deg);
           transform: rotate(-90deg);
 }
 
 #hero #contact {
   position: absolute;
-  bottom: 20px;
+  bottom: 10px;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
+  -webkit-transform-origin: center;
+          transform-origin: center;
 }
 
 #who {
@@ -607,6 +671,7 @@ button:hover {
   button {
     width: 80vw;
     height: 8vh;
+    display: none;
   }
   .buttondark {
     color: #fff;
@@ -630,7 +695,7 @@ button:hover {
     font-family: var(--poppins);
     color: var(--for);
     text-align: center;
-    margin: 60px 0 30px 0;
+    margin: 30px 0 30px 0;
   }
   #hero {
     height: 100vh;
@@ -729,7 +794,7 @@ button:hover {
             transform: translate(-50%, -50%);
   }
   #skills {
-    height: 860px;
+    min-height: 600px;
     position: relative;
   }
   #skill {
@@ -878,15 +943,11 @@ button:hover {
     text-align: center;
   }
   #touch {
-    padding: 0vh 0 12vh 0;
+    padding: 6vh 0 12vh 0;
   }
   #touch span {
     font-size: 22px;
     overflow-wrap: break-word;
-  }
-  #touch .heading {
-    -webkit-transform: translateY(-100px);
-            transform: translateY(-100px);
   }
   #touch .subhead {
     display: block;
@@ -1189,7 +1250,6 @@ button:hover {
   }
   #who p {
     display: inline-block;
-    margin: 0px;
     padding: 60px;
   }
   #what .workgrid {
@@ -1253,7 +1313,7 @@ button:hover {
     opacity: 1;
   }
   #skills {
-    min-height: 800px;
+    min-height: 460px;
     position: relative;
   }
   #skills H2 {
@@ -1270,20 +1330,20 @@ button:hover {
     grid-auto-rows: auto;
     grid-gap: 20px;
   }
+  #skill H3 {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 2vh;
+    margin: 30px 0 30px 0px;
+  }
   .skill {
     position: relative;
-    height: 10vh;
+    height: 16vh;
     width: auto;
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
         align-self: center;
     text-align: start;
-  }
-  .skill H3 {
-    display: inline-block;
-    vertical-align: middle;
-    font-size: 10vw;
-    margin: 30px 0 30px 0px;
   }
   .skill .skillhide {
     position: absolute;
@@ -1361,7 +1421,7 @@ button:hover {
     transition: 0.5 ease-in;
   }
   #softwares {
-    height: 660px;
+    height: 680px;
   }
   #software {
     width: 100%;
@@ -1380,7 +1440,10 @@ button:hover {
   }
   #love {
     position: relative;
-    min-height: 3600px;
+    min-height: 2750px;
+  }
+  #love button {
+    visibility: hidden;
   }
   #love .button {
     visibility: hidden;
@@ -1451,12 +1514,8 @@ button:hover {
     background-image: url(/Assets/img/Love/photbg.png);
   }
   #touch {
-    padding: 20vh 0 12vh 0;
-    height: 540px;
-  }
-  #touch .heading {
-    -webkit-transform: translateY(-100px);
-            transform: translateY(-100px);
+    padding: 20vh 0 0 0;
+    min-height: 300px;
   }
   #touch .subhead {
     display: block;
@@ -1476,7 +1535,7 @@ button:hover {
     padding: 8vh;
   }
   #insta {
-    padding: 4vw 6vw;
+    padding: 0vw 6vw 4vw 6vw;
   }
   #footer {
     color: white;
@@ -1666,6 +1725,9 @@ button:hover {
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-auto-rows: auto;
     grid-gap: 20px;
+  }
+  #skill .skill {
+    height: 12vh;
   }
   #footer {
     min-height: 26vh;
