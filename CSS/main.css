@@ -16,7 +16,6 @@ html, body {
   width: 100%;
   margin: 0px;
   padding: 0px;
-  cursor: none !important;
   background-color: var(--background);
 }
 
@@ -29,8 +28,8 @@ html, body {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   z-index: 50;
-  -webkit-transition: all .1s;
-  transition: all .1s;
+  -webkit-transition: .1s;
+  transition: .1s;
   pointer-events: none;
   mix-blend-mode: difference;
 }
@@ -83,6 +82,7 @@ html, body {
   width: 10rem;
   background-color: var(--primary);
   border: none;
+  z-index: 49;
   -webkit-transform-origin: center;
           transform-origin: center;
   mix-blend-mode: normal;
@@ -115,10 +115,9 @@ html, body {
 .hovered-navlink {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
+  position: absolute;
   color: white;
-  z-index: 100;
-  -webkit-animation: rotatelink 5s linear infinite;
-          animation: rotatelink 5s linear infinite;
+  z-index: 1100;
 }
 
 .icon-grow {
@@ -369,6 +368,394 @@ button:hover {
     }
   }
   */
+}
+
+#hero .herotext {
+  color: white;
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  text-align: center;
+  display: inline-block;
+  opacity: 0;
+  -webkit-transition: opacity 1s;
+  transition: opacity 1s;
+}
+
+#hero #scorpio:hover ~ #zodiactext {
+  opacity: 1;
+  -webkit-transition: opacity 1s;
+  transition: opacity 1s;
+}
+
+#hero #herocentermain:hover ~ #juggletext {
+  opacity: 1;
+  -webkit-transition: opacity 1s;
+  transition: opacity 1s;
+}
+
+#hero #herocenter:hover ~ #juggletext {
+  opacity: 1;
+  -webkit-transition: opacity 1s;
+  transition: opacity 1s;
+}
+
+#hero .herotext1 {
+  color: white;
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  text-align: center;
+  display: inline-block;
+  opacity: 1;
+  -webkit-transition: opacity 1s;
+  transition: opacity 1s;
+}
+
+#hero svg:hover .aboutmetext {
+  opacity: 0;
+}
+
+#hero #stars {
+  position: absolute;
+  width: 90vw;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  top: 50px;
+}
+
+#hero #scorpio {
+  position: absolute;
+  width: auto;
+  left: 10vw;
+  top: 100px;
+}
+
+#hero #orion {
+  position: absolute;
+  width: auto;
+  right: 200px;
+  top: 100px;
+}
+
+#hero #moon {
+  position: absolute;
+  width: 96px;
+  height: 96px;
+  top: 40vh;
+  left: 40vw;
+  -webkit-animation: moonmove 30s infinite linear forwards;
+          animation: moonmove 30s infinite linear forwards;
+  -webkit-transform: translate(0px, 0px), scale(0.5);
+          transform: translate(0px, 0px), scale(0.5);
+}
+
+@-webkit-keyframes moonmove {
+  from {
+    -webkit-transform: translate(0px, 0px);
+            transform: translate(0px, 0px);
+  }
+  to {
+    -webkit-transform: translate(100px, -700px);
+            transform: translate(100px, -700px);
+  }
+}
+
+@keyframes moonmove {
+  from {
+    -webkit-transform: translate(0px, 0px);
+            transform: translate(0px, 0px);
+  }
+  to {
+    -webkit-transform: translate(100px, -700px);
+            transform: translate(100px, -700px);
+  }
+}
+
+#hero .strokepath {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 0;
+  -webkit-animation: dash 10s linear infinite;
+          animation: dash 10s linear infinite;
+}
+
+@-webkit-keyframes dash {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  20% {
+    stroke-dashoffset: 1000;
+  }
+  80% {
+    stroke-dashoffset: 1000;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes dash {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  20% {
+    stroke-dashoffset: 1000;
+  }
+  80% {
+    stroke-dashoffset: 1000;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@-webkit-keyframes scaleup {
+  from {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes scaleup {
+  from {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+#hero #herocentermain {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%) scale(0.8);
+          transform: translate(-50%, -50%) scale(0.8);
+}
+
+#hero #herocentermain #herocenter {
+  position: relative;
+}
+
+#hero #herocentermain #cloud_left {
+  -webkit-animation: cloudl 10s ease-in-out  infinite alternate;
+          animation: cloudl 10s ease-in-out  infinite alternate;
+}
+
+@-webkit-keyframes cloudl {
+  from {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+  from {
+    -webkit-transform: translateX(-100px);
+            transform: translateX(-100px);
+  }
+}
+
+@keyframes cloudl {
+  from {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+  from {
+    -webkit-transform: translateX(-100px);
+            transform: translateX(-100px);
+  }
+}
+
+#hero #herocentermain #cloud_right {
+  -webkit-animation: cloudr 10s ease-in-out infinite alternate;
+          animation: cloudr 10s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes cloudr {
+  from {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+  from {
+    -webkit-transform: translateX(50px);
+            transform: translateX(50px);
+  }
+}
+
+@keyframes cloudr {
+  from {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+  from {
+    -webkit-transform: translateX(50px);
+            transform: translateX(50px);
+  }
+}
+
+#hero #herocentermain #levi {
+  position: absolute;
+  -webkit-animation: levitate 2s ease-in-out infinite alternate;
+          animation: levitate 2s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes levitate {
+  from {
+    -webkit-transform: translatey(0px);
+            transform: translatey(0px);
+  }
+  to {
+    -webkit-transform: translatey(-25px);
+            transform: translatey(-25px);
+  }
+}
+
+@keyframes levitate {
+  from {
+    -webkit-transform: translatey(0px);
+            transform: translatey(0px);
+  }
+  to {
+    -webkit-transform: translatey(-25px);
+            transform: translatey(-25px);
+  }
+}
+
+#hero #herocentermain #shadow {
+  -webkit-animation: shadow 2s infinite alternate;
+          animation: shadow 2s infinite alternate;
+}
+
+@-webkit-keyframes shadow {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.2;
+  }
+}
+
+@keyframes shadow {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.2;
+  }
+}
+
+#hero #herocentermain #plant {
+  -webkit-animation: levitate 2s ease-in infinite 1s alternate;
+          animation: levitate 2s ease-in infinite 1s alternate;
+}
+
+#hero #herocentermain #orbs {
+  position: absolute;
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+  -webkit-animation: orbs 30s linear infinite normal;
+          animation: orbs 30s linear infinite normal;
+}
+
+@-webkit-keyframes orbs {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes orbs {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+#hero #herocentermain #orbs #DSLR {
+  position: absolute;
+  -webkit-transform-origin: 68% 61%;
+          transform-origin: 68% 61%;
+  -webkit-animation: orb 30s linear infinite;
+          animation: orb 30s linear infinite;
+}
+
+#hero #herocentermain #orbs #gamepad {
+  position: absolute;
+  -webkit-transform-origin: 50.5% 29%;
+          transform-origin: 50.5% 29%;
+  -webkit-animation: orb 30s linear infinite;
+          animation: orb 30s linear infinite;
+}
+
+#hero #herocentermain #orbs #Telescope {
+  position: absolute;
+  -webkit-transform-origin: 33.5% 41%;
+          transform-origin: 33.5% 41%;
+  -webkit-animation: orb 30s linear infinite;
+          animation: orb 30s linear infinite;
+}
+
+#hero #herocentermain #orbs #Repair {
+  position: absolute;
+  -webkit-transform-origin: 66.5% 41%;
+          transform-origin: 66.5% 41%;
+  -webkit-animation: orb 30s linear infinite;
+          animation: orb 30s linear infinite;
+}
+
+#hero #herocentermain #orbs #paint {
+  position: absolute;
+  -webkit-transform-origin: 34.5% 60%;
+          transform-origin: 34.5% 60%;
+  -webkit-animation: orb 30s linear infinite;
+          animation: orb 30s linear infinite;
+}
+
+#hero #herocentermain #orbs #compass {
+  position: absolute;
+  -webkit-transform-origin: 51% 72%;
+          transform-origin: 51% 72%;
+  -webkit-animation: orb 30s linear infinite;
+          animation: orb 30s linear infinite;
+}
+
+@-webkit-keyframes orb {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg);
+  }
+}
+
+@keyframes orb {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg);
+  }
 }
 
 #hero #logo {
@@ -703,6 +1090,31 @@ button:hover {
     background-color: var(--for1);
     padding: 0px;
   }
+  #hero #stars {
+    position: absolute;
+    width: 190vw;
+    left: 50%;
+    overflow: hidden;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    top: 100px;
+  }
+  #hero #scorpio {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+    left: -16vw;
+    top: 5vh;
+  }
+  #hero #orion {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+    right: -2vw;
+    top: 5vh;
+  }
+  #hero #moon {
+    width: 48px;
+    height: 48px;
+  }
   #hero .siconhero {
     display: none;
   }
@@ -928,8 +1340,8 @@ button:hover {
     width: 100%;
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 1fr 1fr;
-        grid-template-columns: 1fr 1fr;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
   }
   #love .hobbypic {
     background-color: var(--for1);
@@ -1772,4 +2184,44 @@ button:hover {
 
 //@media (min-width: 1025px) and (max-width: 1366px) {
 */
+.card {
+  cursor: pointer;
+  display: inline-block;
+  overflow: hidden;
+  -webkit-perspective: 1200px;
+          perspective: 1200px;
+  position: relative;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: translatez(35px);
+          transform: translatez(35px);
+  -webkit-transition: -webkit-transform 200ms ease-out;
+  transition: -webkit-transform 200ms ease-out;
+  transition: transform 200ms ease-out;
+  transition: transform 200ms ease-out, -webkit-transform 200ms ease-out;
+  text-align: center;
+}
+
+.parallax_fore {
+  position: relative;
+  height: 100%;
+  top: 14px;
+  right: -10px;
+  height: 110%;
+}
+
+.parallax_bg {
+  bottom: -200px;
+  left: -50px;
+  position: absolute;
+  right: -50px;
+  top: -50px;
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+  -webkit-transform: translateZ(-50px);
+          transform: translateZ(-50px);
+  z-index: 0;
+}
 /*# sourceMappingURL=main.css.map */

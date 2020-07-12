@@ -14,10 +14,24 @@
 
 /* normal laptops*/
 @media (min-width: 1025px){
- 
+
+#scene{
+  div{
+    position: absolute;
+    color: white;
+    font-size: 10rem;
+  }
+  #par1{
+    left: 100px;
+  }
+  #par2{
+    right: 100px;
+  }
+}  
+
 #projects{
     min-height: 2000px;
-    width: 100%;
+    //  width: 100%;
     display: block;
   button{
     margin: 3vh 0;
@@ -119,7 +133,7 @@
 
 
       }
-    }
+ }
 
 #collection{
   height: 4000px;
@@ -183,7 +197,7 @@ opacity: 1;
 @media only screen and (max-width: 1024px){
 #projects{
   min-height: 1000px;
-  width: 100%;
+  // width: 100%;
   display: block;
 button{
   margin: 3vh 0;

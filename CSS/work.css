@@ -13,9 +13,19 @@
 
 /* normal laptops*/
 @media (min-width: 1025px) {
+  #scene div {
+    position: absolute;
+    color: white;
+    font-size: 10rem;
+  }
+  #scene #par1 {
+    left: 100px;
+  }
+  #scene #par2 {
+    right: 100px;
+  }
   #projects {
     min-height: 2000px;
-    width: 100%;
     display: block;
   }
   #projects button {
@@ -190,7 +200,6 @@
 @media only screen and (max-width: 1024px) {
   #projects {
     min-height: 1000px;
-    width: 100%;
     display: block;
   }
   #projects button {
