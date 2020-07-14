@@ -13,19 +13,24 @@
 
 body {
   background-color: #fff;
-  -webkit-animation: scrollhide 1s linear;
-          animation: scrollhide 1s linear;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+}
+
+.preload {
+  -webkit-animation: scrollhide 5s linear 1 forwards;
+          animation: scrollhide 5s linear 1 forwards;
+}
+
+.preload-end {
+  opacity: 0;
+  -webkit-transition: opacity 1s;
+  transition: opacity 1s;
 }
 
 @-webkit-keyframes scrollhide {
   0% {
     overflow: hidden;
   }
-  99% {
+  99.9% {
     overflow: hidden;
   }
   100% {
@@ -37,7 +42,7 @@ body {
   0% {
     overflow: hidden;
   }
-  99% {
+  99.9% {
     overflow: hidden;
   }
   100% {
@@ -52,15 +57,11 @@ body {
   background-color: var(--for);
   color: white;
   z-index: 100;
-  opacity: 1;
   overflow: hidden;
   text-align: center;
-  -webkit-animation: preloader 1s linear;
-          animation: preloader 1s linear;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+  opacity: 1;
+  -webkit-animation: preloader 5s linear 1 forwards;
+          animation: preloader 5s linear 1 forwards;
 }
 
 #preload #introtext {

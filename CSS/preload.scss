@@ -12,20 +12,23 @@
   }
 
 body {
-    background-color: #fff;
-    
-            animation: scrollhide 1s linear;
-            animation-iteration-count: 1;
-            animation-fill-mode: forwards;
+    background-color: #fff;     
+  }
+  .preload{
+    animation: scrollhide 5s linear 1 forwards;
   }
   
+  .preload-end{
+    opacity: 0;
+    transition: opacity 1s;
+  }
 
   
   @keyframes scrollhide {
     0% {
       overflow: hidden;
     }
-    99% {
+    99.9% {
       overflow: hidden;
     }
     100% {
@@ -41,13 +44,11 @@ body {
     background-color:var(--for);
     color: white;
     z-index: 100;
-    opacity: 1;
     overflow: hidden;
     text-align: center;
-    animation: preloader 1s linear ;
-    animation-iteration-count: 1;  
-    animation-fill-mode: forwards;
-    
+    opacity: 1;
+    animation: preloader 5s linear 1 forwards ;
+   
     #introtext{
     position: absolute;
     vertical-align: center;
@@ -68,7 +69,6 @@ body {
     animation: introname 4s linear forwards;
     font-family: var(--poppins);
     font-weight: 700;
-    
     animation-delay:1.3s;
     opacity: 0;
     }
@@ -117,6 +117,7 @@ body {
     opacity: 0;
     pointer-events: none;
     }
+    
     
     @keyframes preloader {
     0%{
