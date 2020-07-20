@@ -36,6 +36,7 @@ z-index: 110;
 transition: .1s;
 // transition-property: height,width;
 pointer-events: none;
+overflow: hidden;
 mix-blend-mode: difference;
   p{
   opacity: 0;
@@ -88,6 +89,8 @@ opacity: 0;
   z-index: 49;
   transform-origin: center;
   mix-blend-mode: normal;
+
+  overflow: hidden;
   // mix-blend-mode: difference;
   
   animation: pulse2 0.5s  infinite  alternate ;
@@ -106,6 +109,7 @@ transform: scale(1.2);
 position: absolute;
 color:white;
 z-index: 1100;
+overflow: hidden;
 }
 
 .icon-grow{
@@ -388,20 +392,20 @@ transition: .2s;
   stroke-dashoffset: 0;
   animation: dash 10s linear infinite;
   }
-  // @keyframes dash {
-  //  0% {
-  //     stroke-dashoffset: 0;
-  //   }
-  //   20% {
-  //     stroke-dashoffset: 1000;
-  //   }
-  //   80% {
-  //     stroke-dashoffset: 1000;
-  //   }
-  //    100% {
-  //     stroke-dashoffset: 0;
-  //   }
-  // }
+  @keyframes dash {
+   0% {
+      stroke-dashoffset: 0;
+    }
+    20% {
+      stroke-dashoffset: 1000;
+    }
+    80% {
+      stroke-dashoffset: 1000;
+    }
+     100% {
+      stroke-dashoffset: 0;
+    }
+  }
 @keyframes scaleup{
   from{
     transform: scale(0);  
@@ -1231,6 +1235,7 @@ transform: translateX(-50%) scale(50);
 
   #touch{
   padding: 6vh 0 12vh 0;
+  
   span{
     font-size: 22px;
     overflow-wrap: break-word;
@@ -1361,6 +1366,8 @@ transform: translateX(-50%) scale(50);
   }
   #insta {
     padding: 4vw 6vw;
+    z-index: 1;
+    opacity: 0.99;
   }
   .pagefooter{
     min-height: 120px;
@@ -1568,6 +1575,7 @@ transform: translateX(-50%) scale(100);
     height: 70vh;
     width: 100%;
     display: grid;
+    opacity: 0.99;
     grid-template-columns: 1fr 1fr;
     align-self: center;
 
@@ -1752,7 +1760,7 @@ transform: translateX(-50%) scale(100);
       height: 10px;
       width: 100%;
       bottom: 0px;
-      background-color: var(--mid);
+      background-color: var(--bg1);
     }
 
     .skillhover {
@@ -1760,57 +1768,57 @@ transform: translateX(-50%) scale(100);
       width: 0%;
       bottom: 0px;
       background-color: var(--primary);
-      transition: 0.5s ease-in;
+      transition: 0.2s ease-in;
     }
   }
 
   #skill :hover #s1 {
     width: 90%;
-    transition: 0.5s ease-in;
+    transition: 0.3s ease-in;
   }
   #skill :hover #s2 {
     width: 90%;
-    transition: 0.5 ease-in;
+    transition: 0.3s ease-in;
   }
   #skill :hover #s3 {
-    width: 90%;
-    transition: 0.5 ease-in;
+    width: 80%;
+    transition: 0.3s ease-in;
   }
   #skill :hover #s4 {
-    width: 90%;
-    transition: 0.5 ease-in;
+    width: 95%;
+    transition: 0.3s ease-in;
   }
   #skill :hover #s5 {
-    width: 90%;
-    transition: 0.5 ease-in;
+    width: 95%;
+    transition: 0.3s ease-in;
   }
   #skill :hover #s6 {
-    width: 90%;
-    transition: 0.5 ease-in;
+    width: 75%;
+    transition: 0.3s ease-in;
   }
   #skill :hover #s7 {
-    width: 90%;
-    transition: 0.5 ease-in;
+    width: 80%;
+    transition: 0.3s ease-in;
   }
   #skill :hover #s8 {
-    width: 90%;
-    transition: 0.5 ease-in;
+    width: 70%;
+    transition: 0.3s ease-in;
   }
   #skill :hover #s9 {
-    width: 90%;
-    transition: 0.5 ease-in;
+    width: 70%;
+    transition: 0.3s ease-in;
   }
   #skill :hover #s10 {
-    width: 90%;
-    transition: 0.5 ease-in;
+    width: 80%;
+    transition: 0.3s ease-in;
   }
   #skill :hover #s11 {
     width: 90%;
-    transition: 0.5 ease-in;
+    transition: 0.3s ease-in;
   }
   #skill :hover #s12 {
-    width: 90%;
-    transition: 0.5 ease-in;
+    width: 30%;
+    transition: 0.3s ease-in;
   }
 
   #softwares {
@@ -1928,7 +1936,10 @@ transform: translateX(-50%) scale(100);
   } 
   #insta {
     padding: 0vw 6vw 4vw 6vw;
+    z-index: 1;
+    opacity: 0.99;
   }
+
 
   #footer {
     color: white;

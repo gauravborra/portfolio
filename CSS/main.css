@@ -37,6 +37,7 @@ html, body {
   -webkit-transition: .1s;
   transition: .1s;
   pointer-events: none;
+  overflow: hidden;
   mix-blend-mode: difference;
 }
 
@@ -92,6 +93,7 @@ html, body {
   -webkit-transform-origin: center;
           transform-origin: center;
   mix-blend-mode: normal;
+  overflow: hidden;
   -webkit-animation: pulse2 0.5s  infinite  alternate;
           animation: pulse2 0.5s  infinite  alternate;
 }
@@ -124,6 +126,7 @@ html, body {
   position: absolute;
   color: white;
   z-index: 1100;
+  overflow: hidden;
 }
 
 .icon-grow {
@@ -496,6 +499,36 @@ button:hover {
   stroke-dashoffset: 0;
   -webkit-animation: dash 10s linear infinite;
           animation: dash 10s linear infinite;
+}
+
+@-webkit-keyframes dash {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  20% {
+    stroke-dashoffset: 1000;
+  }
+  80% {
+    stroke-dashoffset: 1000;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes dash {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  20% {
+    stroke-dashoffset: 1000;
+  }
+  80% {
+    stroke-dashoffset: 1000;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
 }
 
 @-webkit-keyframes scaleup {
@@ -1729,6 +1762,8 @@ button:hover {
   }
   #insta {
     padding: 4vw 6vw;
+    z-index: 1;
+    opacity: 0.99;
   }
   .pagefooter {
     min-height: 120px;
@@ -2088,6 +2123,7 @@ button:hover {
     width: 100%;
     display: -ms-grid;
     display: grid;
+    opacity: 0.99;
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
     -ms-grid-row-align: center;
@@ -2282,75 +2318,75 @@ button:hover {
     height: 10px;
     width: 100%;
     bottom: 0px;
-    background-color: var(--mid);
+    background-color: var(--bg1);
   }
   .skill .skillhover {
     height: 10px;
     width: 0%;
     bottom: 0px;
     background-color: var(--primary);
-    -webkit-transition: 0.5s ease-in;
-    transition: 0.5s ease-in;
+    -webkit-transition: 0.2s ease-in;
+    transition: 0.2s ease-in;
   }
   #skill :hover #s1 {
     width: 90%;
-    -webkit-transition: 0.5s ease-in;
-    transition: 0.5s ease-in;
+    -webkit-transition: 0.3s ease-in;
+    transition: 0.3s ease-in;
   }
   #skill :hover #s2 {
     width: 90%;
-    -webkit-transition: 0.5 ease-in;
-    transition: 0.5 ease-in;
+    -webkit-transition: 0.3s ease-in;
+    transition: 0.3s ease-in;
   }
   #skill :hover #s3 {
-    width: 90%;
-    -webkit-transition: 0.5 ease-in;
-    transition: 0.5 ease-in;
+    width: 80%;
+    -webkit-transition: 0.3s ease-in;
+    transition: 0.3s ease-in;
   }
   #skill :hover #s4 {
-    width: 90%;
-    -webkit-transition: 0.5 ease-in;
-    transition: 0.5 ease-in;
+    width: 95%;
+    -webkit-transition: 0.3s ease-in;
+    transition: 0.3s ease-in;
   }
   #skill :hover #s5 {
-    width: 90%;
-    -webkit-transition: 0.5 ease-in;
-    transition: 0.5 ease-in;
+    width: 95%;
+    -webkit-transition: 0.3s ease-in;
+    transition: 0.3s ease-in;
   }
   #skill :hover #s6 {
-    width: 90%;
-    -webkit-transition: 0.5 ease-in;
-    transition: 0.5 ease-in;
+    width: 75%;
+    -webkit-transition: 0.3s ease-in;
+    transition: 0.3s ease-in;
   }
   #skill :hover #s7 {
-    width: 90%;
-    -webkit-transition: 0.5 ease-in;
-    transition: 0.5 ease-in;
+    width: 80%;
+    -webkit-transition: 0.3s ease-in;
+    transition: 0.3s ease-in;
   }
   #skill :hover #s8 {
-    width: 90%;
-    -webkit-transition: 0.5 ease-in;
-    transition: 0.5 ease-in;
+    width: 70%;
+    -webkit-transition: 0.3s ease-in;
+    transition: 0.3s ease-in;
   }
   #skill :hover #s9 {
-    width: 90%;
-    -webkit-transition: 0.5 ease-in;
-    transition: 0.5 ease-in;
+    width: 70%;
+    -webkit-transition: 0.3s ease-in;
+    transition: 0.3s ease-in;
   }
   #skill :hover #s10 {
-    width: 90%;
-    -webkit-transition: 0.5 ease-in;
-    transition: 0.5 ease-in;
+    width: 80%;
+    -webkit-transition: 0.3s ease-in;
+    transition: 0.3s ease-in;
   }
   #skill :hover #s11 {
     width: 90%;
-    -webkit-transition: 0.5 ease-in;
-    transition: 0.5 ease-in;
+    -webkit-transition: 0.3s ease-in;
+    transition: 0.3s ease-in;
   }
   #skill :hover #s12 {
-    width: 90%;
-    -webkit-transition: 0.5 ease-in;
-    transition: 0.5 ease-in;
+    width: 30%;
+    -webkit-transition: 0.3s ease-in;
+    transition: 0.3s ease-in;
   }
   #softwares {
     height: 680px;
@@ -2468,6 +2504,8 @@ button:hover {
   }
   #insta {
     padding: 0vw 6vw 4vw 6vw;
+    z-index: 1;
+    opacity: 0.99;
   }
   #footer {
     color: white;

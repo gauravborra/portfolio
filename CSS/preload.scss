@@ -15,7 +15,7 @@ body {
     background-color: #fff;     
   }
   .preload{
-    animation: scrollhide 5s linear 1 forwards;
+    animation: scrollhide 1s linear 1 forwards;
   }
   
   .preload-end{
@@ -47,7 +47,7 @@ body {
     overflow: hidden;
     text-align: center;
     opacity: 1;
-    animation: preloader 5s linear 1 forwards ;
+    animation: preloader 1s linear 1 forwards ;
    
     #introtext{
     position: absolute;
@@ -138,18 +138,17 @@ body {
 
 #introtext{
 H1{
-    font-size: 8vh ;
-    line-height: 8vh; 
+    font-size: 11vw ;
+    line-height: 0vh; 
     color: var(--primary);
     white-space: nowrap;  
 }
 H3{
-    font-size: 5vh ;
+    font-size: 7vw ;
 }
 p{
-    font-size: 10vw;
-    font-weight: 700;
-    line-height: 9vw;  
+  font-size: 6vw;
+  font-weight: 700;
     white-space: nowrap;  
 }
 
@@ -178,5 +177,17 @@ p{
 }
 
 @media (min-width: 1367px){
-
+  #introtext{
+    H1{
+        margin: 0px;
+    
+    }
+    H3{
+      margin: 0px;
+    }
+    p{
+      margin: 0px;
+    }
+    } 
+  
 }
