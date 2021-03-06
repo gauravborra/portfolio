@@ -10,6 +10,7 @@
   --for:#000000;
   --poppins: "Roboto", sans-serif;
   --cormo: "Cormorant Garamond", serif;
+  --snapred:#FF2341;
 }
 
 html, body {
@@ -237,7 +238,6 @@ a:focus,
 a:active {
   text-decoration: none !important;
   color: inherit;
-  cursor: none;
 }
 
 a:hover {
@@ -251,6 +251,22 @@ p {
 
 H3 {
   font-family: var(--poppins);
+}
+
+.darkc {
+  color: var(--for2);
+}
+
+.lightc {
+  color: var(--bg1);
+}
+
+.whitec {
+  color: white;
+}
+
+.blackc {
+  color: #000000;
 }
 
 .title {
@@ -778,10 +794,18 @@ button:hover {
 }
 
 #hero #logo {
-  font-family: var(--poppins);
-  font-size: 3vw;
+  position: fixed;
+  background-image: url(/Assets/png/GB-logo.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 30px;
   color: white;
-  padding: 20px;
+  top: 0px;
+  left: 0px;
+  padding: 20px 20px;
+  margin: 30px;
+  z-index: 9999;
+  mix-blend-mode: difference;
 }
 
 #hero .heromenu {
@@ -2190,19 +2214,19 @@ button:hover {
   }
   #hero #Work {
     position: absolute;
-    top: 51vh;
-    left: -10px;
-    -webkit-transform: rotate(90deg);
-            transform: rotate(90deg);
-  }
-  #hero #contact {
-    position: absolute;
     bottom: 10px;
     left: 50%;
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
     -webkit-transform-origin: center;
             transform-origin: center;
+  }
+  #hero #contact {
+    position: absolute;
+    top: 51vh;
+    left: -20px;
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
   }
   #who .subhead {
     text-align: left;

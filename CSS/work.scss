@@ -7,11 +7,98 @@
   --bg1: #e0e0e0;
   --mid: #808080;
   --for:#000000;
-  --poppins: "Poppins", sans-serif;
+  --poppins: "roboto", sans-serif;
   --cormo: "Cormorant Garamond", serif;
 }
 
+.cases{
+  width: 100%;
+  
+  transform: translateX(50px);
+  height: auto;
+  transform-style: preserve-3d;
+  transform: perspective (1000px);
+  margin-bottom: 300px;
 
+
+  
+  .case-logo{
+  position: absolute;
+  z-index: 20;
+  height: 7vw;
+  width: 7vw;
+  border-radius: 10%;
+  background-color: #FF2341;
+  left: 6vw;
+  top: 46vh;
+  transform: translateZ(60px);
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.25);
+  }
+  
+  .case{
+  width: 75%;
+  right: 10vw;
+  height: 70vh;
+  background-size: cover;
+  background-position-x: right;
+  background-repeat: no-repeat;
+  border-radius: 32px 32px;
+  
+  border: solid 14px #ececec;
+  filter: drop-shadow(20px 40px 90px rgba(0, 0, 0, 0.19));
+  // box-shadow:inset 0 0 0 2000px rgba(0, 0, 0, 0.4);
+
+  
+  .case-title{
+    color: var(--background);
+    font-weight: bold;
+
+    position: absolute;
+    top: 50%;
+  
+    transform: translateY(-50%);
+  }
+  .case-image{
+    // background-image: url(/Assets/img/Cases/Sevac/mock-sevac.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    float: right;
+    height: 80%;
+    width: 50%;
+    margin: 50px 0px;
+    transform: translateZ( 20px);
+  
+  }
+  
+      .case-type{
+      position: absolute;
+      bottom: 30px;
+      margin-left: 40px;
+      color: var(--background);
+  
+          .case-type-group{
+        
+          margin: 10px 50px 10px 10px;
+  
+          span{
+          display: block;
+          padding:2px;
+          }
+       
+  
+          }
+  
+      }
+  }
+  }
+
+
+@media (min-width: 1025px) and (max-width :1079){
+
+
+
+  }
 /* normal laptops*/
 @media (min-width: 1025px){
 
@@ -28,6 +115,74 @@
     right: 100px;
   }
 }  
+#hero{
+  background:white;
+  box-shadow:inset 0 0 0 2000px rgba(0, 0, 0, 0.1);
+
+
+#resume{
+  position: absolute;
+  z-index: 2000;
+}
+#scrolltext{
+  position: absolute;
+  z-index: 10;
+}
+#scroll{
+  position: absolute;
+  z-index: 10;
+}
+
+.num{
+  background:#000;
+    color:#fff;
+    position: absolute;
+    z-index: 10;
+    padding:10px;
+    bottom: 0px;
+    left: 0px;
+    width:50px;
+    text-align:center;
+
+}
+#carouselExampleIndicators {
+height: 100%;
+position: relative;
+
+.carousel-caption-work {
+  position: absolute;
+  left:16vw;
+  top:50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: #fff;
+  text-align: left;
+}
+
+.wc-title{
+font-family: var(--poppins);
+display: inline-block;
+padding: 10px;
+font-size:4vw;
+font-family: Roboto;
+font-style: normal;
+font-weight: bold;
+line-height: 110%;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+width:40vw;
+text-overflow: wrap;
+}
+
+.full-screen {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+}
+} 
 
 #projects{
     min-height: 2000px;
@@ -135,6 +290,56 @@
       }
  }
 
+.cases{
+  margin: 200px auto;
+ .case{
+  margin: 0 auto;
+ } 
+  .case-title{
+    font-size: 3vw; 
+    margin-left: 60px;
+    line-height: 64px;
+  }
+  .case-type{
+    display: inline;
+    position: absolute;
+    bottom: 30px;
+    margin-left: 40px;
+    color: var(--background);
+
+        .case-type-group{
+        display: inline-block;
+        margin: 10px 50px 10px 10px;
+
+        span{
+        display: block;
+        padding:2px;
+        }
+        .span-a{
+          font-family: Roboto;
+          font-style: normal;
+          font-weight: 900;
+          font-size: 1vw;
+          line-height: 23px;
+          letter-spacing: 13px;
+        }
+        .span-b{
+          font-family: Roboto;
+          font-style: normal;
+          font-weight: normal;
+          font-size: .9vw;
+          line-height: 19px;
+          /* identical to box height */
+          
+          letter-spacing: 3px;
+        }
+
+        }
+
+    }
+
+
+}
 #collection{
   height: 4000px;
 
@@ -199,6 +404,7 @@ opacity: 1;
   min-height: 1000px;
   // width: 100%;
   display: block;
+
 button{
   margin: 3vh 0;
 
@@ -305,6 +511,8 @@ button{
     }
   }
 
+
+  
   #collection{
    display: none;
   } 
@@ -352,6 +560,61 @@ button{
   }
   } 
 
+}
+
+
+.cases{
+margin-top: 100px;
+width: 100%;  
+.case {
+  width: 90%;
+ height: 40vh;
+ background-position-x: right;
+ background-position-y: top;
+ box-shadow:inset 0 0 0 2000px rgba(0, 0, 0, 0.4);
+
+} 
+.case-logo{
+height: 10vh;
+width: 10vh;
+transform: translateX(-70px);
+left: 4vw;
+top: 28vh;
+}
+.case-title{
+ font-size: 3vh;
+ margin-left: 20px;
+ line-height: 36px; 
+}
+.case-type{
+
+  display: none;
+  .case-type-group{
+    
+
+    .span-a{
+      font-size: 3vh;
+   
+    } 
+    .span-b{
+     font-size: 2vh;
+   
+   } 
+   }
+
+}
+}
+
+#hero{
+  display: none;
+}
+#carouselExampleIndicators {
+position: relative;
+
+.carousel-item{
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 }
 }
 

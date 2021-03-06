@@ -20,15 +20,31 @@ body {
   padding: 10vh 10vw 10vh 10vw !important;
 }
 
+h5 {
+  display: inline-block;
+  padding: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.full-screen {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 .heropages {
-  height: 80vh;
-  background-color: var(--for1);
+  height: 100vh;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
   padding: 0px;
   -webkit-box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.4);
           box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.4);
+}
+
+.heropages #carouselExampleIndicators {
+  z-index: 0;
 }
 
 .heropages #logo {
@@ -38,6 +54,7 @@ body {
   position: absolute;
   left: 20px;
   top: 20px;
+  z-index: 10;
 }
 
 .heropages .heromenu {
@@ -62,6 +79,7 @@ body {
   font-size: 12px;
   font-weight: 50;
   color: var(--bg1);
+  z-index: 10;
 }
 
 .heropages #scroll {
@@ -71,6 +89,7 @@ body {
   height: 200px;
   width: 2px;
   background-color: var(--mid);
+  z-index: 10;
 }
 
 .heropages #scroll2 {
@@ -141,6 +160,7 @@ body {
   position: absolute;
   top: 20px;
   right: 20px;
+  z-index: 10;
 }
 
 .heropages span:hover {
@@ -195,10 +215,6 @@ body {
   margin: 0px;
 }
 
-#scicomm #scicommhero {
-  background-image: url(/Assets/img/scicomm.png);
-}
-
 #scicomm #discovery {
   background-color: #e06614;
   color: white;
@@ -233,14 +249,6 @@ body {
   -webkit-transition: .3s;
   transition: .3s;
   cursor: e-resize;
-}
-
-h5 {
-  display: inline-block;
-  padding: 10px;
-  background: #B9121B;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
 }
 
 .full-screen {
