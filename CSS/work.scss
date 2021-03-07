@@ -4,9 +4,10 @@
   --for: black;
   --for1: #212121;
   --background: #fff;
-  --bg1: #e0e0e0;
+  --bg1: #f8f8f8;
   --mid: #808080;
   --for:#000000;
+  --bg2: #f4f4f4;
   --poppins: "roboto", sans-serif;
   --cormo: "Cormorant Garamond", serif;
 }
@@ -92,6 +93,7 @@
       }
   }
   }
+
 
 
 @media (min-width: 1025px) and (max-width :1079){
@@ -290,8 +292,54 @@ text-overflow: wrap;
       }
  }
 
+
+#work-grid{
+display: grid;
+grid-template-columns: 1fr 1fr;
+grid-gap: 5vh;
+width: 100%;
+
+
+  .work{
+  min-height: 35vw;
+  width: 35vw;
+  background-color:var(--bg1);
+  justify-self: center;
+  position: relative;
+  border-radius: 0px 0px 4% 4%;
+.work-logo
+{
+position: absolute;
+height:8vh;
+width: auto;  
+right: 1.6vh;
+transform: translateY(-50px);
+border-radius:10%;
+box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+  .meta{
+    display: block;
+    padding: 1vh 2vh 3vh 2vh;
+    height: auto;
+
+  .wtype{
+  width: 60%;
+}  
+
+  }
+  .work-image{
+  width: 100%;
+  height:auto;
+  background-size: cover;
+  }
+  
+  }  
+
+} 
+
 .cases{
-  margin: 200px auto;
+  margin: 200 auto;
  .case{
   margin: 0 auto;
  } 
@@ -511,8 +559,52 @@ button{
     }
   }
 
+  #work-grid{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 5vh;
+    width: 100%;
+    
+  .work{
+      min-height: 35vw;
+      background-color: #ececec;
+      justify-self: center;
+      position: relative;
+      border-radius: 0px 0px 4% 4%;
+    .work-logo
+    {
+    position: absolute;
+    height: 6.4vh ;
+    width: auto;  
+    right: 1.6vh;
+    transform: translateY(-50px);
+    border-radius:10%;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+    
+      .meta{
+        display: block;
+        padding: 1vh 2vh 4vh 2vh;
+        height: auto;
+    
+      .wtype{
+    width: 60%;
+    }  
+    
+      }
+      .work-image{
+      width: 100%;
+      height:auto;
+    
+    //  background-image: url(/Assets/img/Cases/Sevac/behance-cover.jpg);
+     background-size: cover;
+    
+      }
+      
+      }  
+    
+    } 
 
-  
   #collection{
    display: none;
   } 
@@ -605,9 +697,6 @@ top: 28vh;
 }
 }
 
-#hero{
-  display: none;
-}
 #carouselExampleIndicators {
 position: relative;
 

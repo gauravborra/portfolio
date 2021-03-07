@@ -9,6 +9,7 @@
     <title>Gaurav Borra Portfolio</title>
     <link rel="stylesheet" href="/CSS/main.css">
     <link rel="stylesheet" href="/CSS/work.css">
+    <link rel="stylesheet" href="/CSS/Typo.css">
     <link rel="stylesheet" href="/CSS/boot.css">
     <!-- <link rel="stylesheet" href="/CSS/carousel.css">  -->
     <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
@@ -24,10 +25,8 @@
    <div class="cursormain hidden-m"><p>VIEW</p></div>
    <div class="cursorsmall hidden-m"></div>
    <div class="glowcursor hidden-m"></div>
-  
 
-
-  <section id="hero"> 
+  <section id="hero" class="hidden-m"> 
     <a id="logo" href="index.html"> </a>
     <a href="/Assets/Resume -gaurav borra-min.pdf" target="_blank"><span id="resume" class="heromenu navlinks">RESUME </span></a>
     <span id="scrolltext" class="heromenu">scroll <br>for <br> more<br>work</span>
@@ -43,7 +42,7 @@
      <!-- <a href="https://dribbble.com/gauravborra" target="_blank"><svg class="dribble hicon icons" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512"><path d="M256 0C115 0 0 115.1 0 256c0 141 115.1 256 256 256 141 0 256-115 256-256C512 115 397 0 256 0zM429.6 111.5c32 38.3 51.5 87.4 52.3 140.9 -40.1-9.4-84.5-10-129.9-1.7 -11.8 2.2-23.6 4.9-35.3 8.2 -3.9-10.6-8-21.1-12.4-31.5 -4.5-10.6-9.2-21.1-14.2-31.4C344.2 175.3 402.7 144.6 429.6 111.5zM256 30c58.8 0 112.5 22.6 152.7 59.5C393 111 348.3 142.1 276.5 169c-25.1-46.7-55.1-89.5-89.8-128.1C208.5 33.8 231.8 30 256 30zM157 52.9c35.4 37.9 65.9 80.3 91 126.1 -74.7 24.2-150.3 34-212.5 27.7C50.6 139 96.1 82.7 157 52.9zM30 256c0-6.6 0.3-13.2 0.9-19.7 13.7 1.5 28 2.2 42.8 2.2 58.3 0 123.9-11.2 188.2-32.5 9.8 20.1 18.7 40.8 26.4 62 -25.1 9-49.5 20.5-72.4 34.1 -56.2 33.5-97.3 76.5-114.4 118.7C57.5 379.5 30 320.9 30 256zM256 482c-48.3 0-93.1-15.2-129.9-41.1 11.4-38.5 50-80.2 105.1-113 19.4-11.6 42.2-22.5 66.9-31.4 17.5 55.1 28.3 113.3 31.7 173.1C306.7 477.6 281.8 482 256 482zM359.1 457.1c-4.2-58.3-15-115.1-32.4-169.6 48.6-13.4 102.6-17.8 153.8-4.6C471.3 358.9 424.4 423.5 359.1 457.1z"/></svg></a> -->
   </div> 
 <!-- <div class="num"></div> -->
-  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <div id="carouselExampleIndicators" class="carousel slide " data-ride="carousel">
   <!-- <ol class="carousel-indicators">
       <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
       <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -98,12 +97,10 @@
     <H1 class="heading">Projects</H1>
     <h2 class="subhead darkc">Project work comprising of different</h2>
     
-    <div class="cases viewcursor" data-tilt data-tilt-max="5" data-tilt-scale="1.05" data-tilt-glare data-tilt-max-glare="0.5">
+    <!-- <div class="cases viewcursor hidden-m " data-tilt data-tilt-max="5" data-tilt-scale="1.05" data-tilt-glare data-tilt-max-glare="0.5">
       <div class="case-logo"> </div>
       <div class="case" style = "background-image: url(/Assets/img/Cases/Sevac//sevac-cover.jpg);">
         <div class="case-title" >S.E.V.A.C. </div>
-        <!-- <div class="case-image" style=" background-image: url(/Assets/img/Cases/Sevac/for-mock.png"> </div> -->
-
         <div class="case-type" >
           <div class="case-type-group"> 
             <span class="span-a" >FOR</span>
@@ -123,13 +120,13 @@
 
       </div>
 
-    </div>
-    <div id="projectgrid">
+    </div> -->
+    <!-- <div id="projectgrid">
             <div class="project">
           <div class="projectcover" data-tilt data-tilt-max="10" data-tilt-glare data-tilt-max-glare="0.8" data-tilt-gyroscope="true"> </div>
           <div class="projectinfo"> 
             <H1 class="title">SCICOMM</H1> 
-            <!-- <H4 class="subtitle">Lorem ipsum dolor sit amet consectetur </H4> -->
+           //<H4 class="subtitle">Lorem ipsum dolor sit amet consectetur </H4> 
             <H3 class="subtitle worktype"> Branding</H3>
             <a href="/scicomm.html" target="blank"><button > View Project</button></a>
           </div>
@@ -139,16 +136,63 @@
             <div class="projectcover " data-tilt data-tilt-max="5" data-tilt-glare data-tilt-max-glare="0.8" gyroscope="true"> </div>
             <div class="projectinfo"> 
               <H1 class="title">Nutriparcel</H1> 
-              <!-- <H4 class="subtitle">Lorem ipsum dolor sit amet consectetur </H4> -->
+              // <H4 class="subtitle">Lorem ipsum dolor sit amet consectetur </H4> 
               <H3 class=" subtitle worktype"><span></span>Branding</H3>
               <H3 class=" subtitle worktype"><span></span>Development</H3>
               <button> View Project</button>
             </div>
           </div>
     
-    </div>
+    </div> -->
+    
+    <div id="work-grid"> 
+
+      <a href="/work/Sevac.html"><div class="work viewcursor">
+         <img class="work-image viewcursor" src="/Assets/img/Cases/Sevac/behance-cover.jpg" >
+      <div class="meta">
+        <img class="work-logo" src="/Assets/img/Cases/Sevac/snapdeal-logo.jpg" >
+        
+          <H2 class="title font-weight-bold grey1">SEVAC</H2>
+          <H3 class="float-left subtitle wtype grey2">PRODUCT DESIGN</H3>
+          <H5 class="float-right subtitle wtime grey2">2020</H5>
+        </div>
+      </div></a>
+      <a href="/work/Scratch-card.html"><div class="work viewcursor">
+        <img class="work-image viewcursor" src="/Assets/img/Cases/Sevac/behance-cover.jpg" >
+     <div class="meta">
+       <img class="work-logo" src="/Assets/img/Cases/Sevac/snapdeal-logo.jpg" >
+       
+         <H2 class="title font-weight-bold grey1">Scratch Card</H2>
+         <H3 class="float-left subtitle wtype grey2">PRODUCT DESIGN</H3>
+         <H5 class="float-right subtitle wtime grey2">2020</H5>
+       </div>
+     </div></a>
+     <a href="/work/Sevac.html"><div class="work viewcursor">
+      <img class="work-image viewcursor" src="/Assets/img/Cases/Sevac/behance-cover.jpg" >
+   <div class="meta">
+     <img class="work-logo" src="/Assets/img/Cases/Sevac/snapdeal-logo.jpg" >
      
-     <!-- <iframe class="figmapro" style="border: none;" width="360" height="780" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2F1UucvbbEbotvVUDbAjFHEz%2FSevac%3Fnode-id%3D117%253A31701%26viewport%3D-219%252C-301%252C0.23317106068134308%26scaling%3Dmin-zoom" allowfullscreen></iframe> -->
+       <H2 class="title font-weight-bold grey1">SEVAC</H2>
+       <H3 class="float-left subtitle wtype grey2">PRODUCT DESIGN</H3>
+       <H5 class="float-right subtitle wtime grey2">2020</H5>
+     </div>
+   </div></a>
+   <a href="/work/Sevac.html"><div class="work viewcursor">
+    <img class="work-image viewcursor" src="/Assets/img/Cases/Sevac/behance-cover.jpg" >
+ <div class="meta">
+   <img class="work-logo" src="/Assets/img/Cases/Sevac/snapdeal-logo.jpg" >
+   
+     <H2 class="title font-weight-bold grey1">SEVAC</H2>
+     <H3 class="float-left subtitle wtype grey2">PRODUCT DESIGN</H3>
+     <H5 class="float-right subtitle wtime grey2">2020</H5>
+   </div>
+ </div></a>
+    
+
+  
+
+    </div>
+
      </section>
 
      <section id="collection">
@@ -304,7 +348,7 @@ function showSlides(n) {
   dots[slideIndex-1].className += " active";
 }
    </script>
-  <script>
+  <!-- <script>
     var current = $(window).scrollTop();
     var total = $(window).height() - current;
     var ele = $(".heading");
@@ -317,7 +361,7 @@ $(window).scroll(function (event) {
     var newPosition = trackLength * (current/total)
     ele.css({left:currPosition+newPosition+'px'});
 });
-  </script>
+  </script> -->
 
   <!-- carousel -->
   <script>
@@ -400,10 +444,45 @@ var totalItems = $('.item').length;
 
 </script> -->
      <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script> -->
-    <script src="/JS/cursor.js"></script>
-   <script src="/JS/vanilla-tilt.min.js"></script>    
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+  <!-- menu button -->
+  <script>
+    var overlay = document.getElementById('overlay-content');
+    var close = document.getElementById('close-menu');
+    var menuOverlay = document.getElementById('menu-button');
+    var body = document.body;
+  
+  document.getElementById('hammenu').addEventListener('click',function(){
+  overlay.classList.add('show-menu');
+  overlay.classList.remove('hidden-menu');
+  menuOverlay.classList.remove('menu-button');
+  menuOverlay.classList.add('menu-grow');
+  body.classList.add('overflow-hidden');
+  body.classList.remove('preload');
+
+  });
+ 
+  document.getElementById('close-menu').addEventListener('click',function(){
+  overlay.classList.remove('show-menu');
+  overlay.classList.add('hidden-menu');
+  menuOverlay.classList.add('menu-button');
+  menuOverlay.classList.remove('menu-grow');
+  body.classList.remove('overflow-hidden');
+
+  });
+
+  document.getElementById('menulist').addEventListener('click',function(){
+  overlay.classList.remove('show-menu');
+  overlay.classList.add('hidden-menu');
+  menuOverlay.classList.add('menu-button');
+  menuOverlay.classList.remove('menu-grow');
+  body.classList.remove('overflow-hidden');
+  });
+  </script>
+<script src="/JS/cursor.js"></script>
+<script src="/JS/vanilla-tilt.min.js"></script>    
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     
 </body>

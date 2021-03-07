@@ -1,0 +1,97 @@
+
+.heropages{
+    // box-shadow:inset 0 0 0 2000px rgba(0, 0, 0, 0.4);
+    background-size: cover;
+    background-position-x: right;
+    height: 80vh !important; 
+}
+
+.hero-sevac {
+    background-image: url(/Assets/img/Cases/Sevac/sevac-cover.jpg);    
+}
+
+
+#case-info{
+min-height :20vh;
+padding: 4vh 10vw 4vh 10vw ;
+}
+
+.case-info{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap:2vw;
+}
+#overview{
+  position: relative;  
+}
+.pagenumber{
+ position: absolute;
+ top:10vh;
+ font-size: 50vh; 
+ z-index: -1;  
+}
+.over-flex{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+padding: 7.2vh;
+background: #FFFFFF;
+box-shadow: 10px 10px 74px rgba(0, 0, 0, 0.08);
+border-radius: 48px;
+width: 40vw; 
+
+}
+.over-grid{
+display: grid;
+grid-template-columns: 1fr 1fr;
+grid-column-gap: 6vh;
+grid-row-gap: 20vh;
+
+
+}
+.clay-mobile{
+position: relative;
+filter: drop-shadow(40px 40px 96px rgba(0, 0, 0, 0.25));
+// background-image: url(/Assets/img/mock/White-no-Shadow.png);    
+.frame{
+   position: absolute; 
+}
+
+.screen{
+
+   padding: 19px 0px 0px 23px ;
+
+}
+}
+
+html 
+{
+ overflow: auto;
+}
+ 
+html, body, div, iframe 
+{
+ margin: 0px; 
+ padding: 0px; 
+ height: 100%; 
+ border: none;
+}
+
+.figma-case{
+    display: block; 
+    width: 100%; 
+    height: 100vh;
+    border: none; 
+    overflow-y: auto; 
+    overflow-x: hidden;   
+}
+
+.figmafoot{
+   height: 48px;
+   width: 100%; 
+   background-color:black;
+   position: fixed;
+   z-index: 99999;
+   bottom: 0px;
+}

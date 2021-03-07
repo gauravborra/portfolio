@@ -5,7 +5,8 @@
   --for: black;
   --for1: #212121;
   --background: #fff;
-  --bg1: #e0e0e0;
+  --bg1: #ececec;
+  --bg2: #c6c6c6;
   --mid: #808080;
   --for:#000000;
   --poppins: "Roboto", sans-serif;
@@ -18,7 +19,8 @@ html,body {
   margin: 0px;
   padding: 0px;
  cursor: none !important;;
-  background-color: var(--background);
+ font: var(--poppins);
+ background-color: var(--background);
 }
 .overflow-hidden{
   overflow: hidden;
@@ -119,7 +121,7 @@ overflow: hidden;
   background-color:var(--primary);
   mix-blend-mode: normal;
   border:none;
-  z-index: 40;
+  z-index: 100;
   animation: pulse infinite 1s;
   animation-direction:alternate;
   @keyframes pulse{
@@ -136,7 +138,7 @@ overflow: hidden;
 .hovered-icon{
   transform: scale(1.5);
   position: relative;
-  z-index:100;
+  z-index:111;
   
 }
 
@@ -194,7 +196,7 @@ a:focus,
 a:active {
   text-decoration: none !important ;
   color: inherit;
-  // cursor: none;
+  cursor: none;
 }
 
 a:hover{
@@ -226,17 +228,10 @@ color: var(--for2);
 
 .title {
   font-family: var(--poppins);
-  font-weight:400;
   font-size: 3vw;
-  letter-spacing: 2px;
-  text-align: center;
-  
+  letter-spacing: 2px;  
 }
-.subtitle {
-  font-family: var(--poppins);
-  font-size: 2.5vh;
-  margin : 1vw
-}
+
 
 .pad {
   padding: 0 10vw;
@@ -248,34 +243,8 @@ section{
 
 }
 
-.heading {
-  font-family: var(--cormo);
-  font-size: 20vh;
-  margin: 0px;
-  font-style: italic;
-  font-weight: 300;;
-  color: var(--bg1);
-  position: absolute;
-  white-space: nowrap;
-  top: 1vh;
-  left: 50%;
-  transform: translateX(-50%);
-
-}
 
 
-
-
-.headingb {
-  color: var(--for1);
-}
-.subhead {
-  font-family: var(--poppins);
-  font-size: 4vh;
-
-  text-align: center;
-  margin: 60px 0 60px 0;
-}
 
 button {
   cursor: none !important;
@@ -562,7 +531,7 @@ transition: .2s;
     background-size: contain;
     background-repeat: no-repeat ;
     width:30px;
-    color: white;
+    color: var(--mid);
     top:0px;
     left: 0px;
     padding: 20px 20px;
@@ -865,7 +834,7 @@ transform: translateX(-50%) scale(50);
   grid-template-columns: 1fr;
   text-align: center;
   position: absolute;
-  top:50%;
+  top:40%;
   left:50%;
   transform:translate(-50%,-50%);
   .menu-items{ 
@@ -912,38 +881,30 @@ transform: translateX(-50%) scale(50);
 .menu-items:nth-of-type(4){
   animation:menu-items .3s .8s ease-in-out forwards ;
 }
-
-  .heading {
-    font-size: 7vh;
-    font-family: var(--cormo);
-    font-style: italic;
-    font-weight: 300;;
-    color: var(--bg1);
-    position: absolute;
-    white-space: nowrap;
-    top: 5vw;
-    right: 10vw;
-  }
-  .headingb {
-    font-size: 7vh;
-    font-family: var(--cormo);
-    font-style: italic;
-    font-weight: 300;;
-    color: var(--for1);
-    position: absolute;
-    white-space: nowrap;
-    top: 5vw;
-    right: 10vw;
-  }
+.menu-items:nth-of-type(5){
+  animation:menu-items .3s 1s ease-in-out forwards ;
+}
+.menu-icons{
+  animation:menu-items .3s 1s ease-in-out forwards ;
+}
+.menu-icons{
+  position: absolute;
+  bottom: 50px;
+  left: 23%;
+  opacity: 0;
+  // transform: translateX(-50%);
+a{
+  margin-right: 20px;
+}
+.call-menu{
+ transform: translateY(-50px); 
+}
+}
+  
   .hidden-m{
     display: none;
   }
-  .title {
-    font-family: var(--poppins);
-    font-size: 8vw;
-    line-height: 11vw;
-   
-  }
+
   button {
     width: 80vw;
     height: 8vh;
@@ -966,13 +927,7 @@ transform: translateX(-50%) scale(50);
     color:#333;
     background-color: #fff;
   }
-  .subhead {
-    font-size: 3vh;
-    font-family: var(--poppins);
-    color: var(--for);
-    text-align: center;
-    margin: 30px 0 30px 0;
-  }
+
   #hero {
     height:100%;
     width: 100%;
@@ -1540,6 +1495,25 @@ transform: translateX(-50%) scale(50);
   .menu-items:nth-of-type(4){
     animation:menu-items .3s 1s ease-in-out forwards ;
   }
+  .menu-items:nth-of-type(5){
+    animation:menu-items .3s 1.2s ease-in-out forwards ;
+  }
+  .menu-icons{
+    position: absolute;
+    display: block;  
+    bottom: 50px;
+    left: 44%;
+    opacity: 0;
+    // transform: translate(-50%,-50%);
+    text-align: center;
+    margin: 0 auto;
+  a{
+    margin-right: 50px;
+  }
+  }
+  .menu-icons{
+    animation:menu-items .3s 1.2s ease-in-out forwards ;
+  }
 
   #hammenu{
     height: 48px;width:48px;
@@ -1676,12 +1650,7 @@ transform: translateX(-50%) scale(100);
 
   #who {
     
-    .subhead {
-      text-align: left;
-      justify-self: center;
-      align-self: center;;
-      
-    }
+   
     .aboutme {
     height: 100%;
     text-align: center;
