@@ -987,6 +987,7 @@ a{
 
     #logo {
       font-size: 6vh;
+      position: absolute;
    
     }
   }
@@ -1078,7 +1079,7 @@ a{
 
   }
   #skills {
-    min-height: 600px;
+    min-height: 760px;
     position: relative;
   }
   #skill {
@@ -1331,14 +1332,14 @@ a{
   }
 
   footer {
-
+    height: 14vh;
     color: white;
     text-align: center;
     width: 100%;
     background-color: black;
     bottom: 0px;
     p {
-      padding: 2vh 0 20vh 0 ;
+      padding: 2vh 0 5vh 0 ;
       margin: 0px;
     }
   }
@@ -1719,7 +1720,7 @@ transform: translateX(-50%) scale(100);
      } 
   
   #skills {
-    min-height: 460px;
+    min-height: 640px;
     position: relative;
     H2 {
       display: block;
@@ -2041,7 +2042,7 @@ transform: translateX(-50%) scale(100);
     }
   }
 
-  footer {
+  footer{
     height: 8vh;
     color: white;
     text-align: center;
@@ -2126,7 +2127,6 @@ svg{
 
 
   #skills {
-    min-height: 440px;
     position: relative;
     H2 {
       display: block;

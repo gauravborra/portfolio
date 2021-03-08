@@ -147,6 +147,7 @@
     text-align: left;
   }
   #hero #carouselExampleIndicators .wc-title {
+    display: none;
     font-family: var(--poppins);
     display: inline-block;
     padding: 10px;
@@ -283,6 +284,7 @@
         grid-template-columns: 1fr 1fr;
     grid-gap: 5vh;
     width: 100%;
+    justify-items: center;
   }
   #work-grid .work {
     min-height: 35vw;
@@ -306,7 +308,7 @@
   }
   #work-grid .work .meta {
     display: block;
-    padding: 1vh 2vh 3vh 2vh;
+    padding: 1vh 2vh 3vh 3vh;
     height: auto;
   }
   #work-grid .work .meta .wtype {

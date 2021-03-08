@@ -39,9 +39,6 @@
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
-}
-
-.subhead {
   font-family: var(--poppins);
   font-size: 4vh;
   text-align: center;
@@ -185,7 +182,7 @@
     font-family: var(--poppins);
     font-size: 4vh;
     text-align: center;
-    margin: 60px 0 60px 0;
+    margin: 30px 0 30px 0;
   }
   .articles {
     display: -ms-grid;

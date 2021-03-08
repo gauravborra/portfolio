@@ -1384,6 +1384,7 @@ button:hover {
   }
   #hero #logo {
     font-size: 6vh;
+    position: absolute;
   }
   #who {
     height: auto;
@@ -1470,7 +1471,7 @@ button:hover {
             transform: translate(-50%, -50%);
   }
   #skills {
-    min-height: 600px;
+    min-height: 760px;
     position: relative;
   }
   #skill {
@@ -1730,6 +1731,7 @@ button:hover {
     display: inline-block;
   }
   footer {
+    height: 14vh;
     color: white;
     text-align: center;
     width: 100%;
@@ -1737,7 +1739,7 @@ button:hover {
     bottom: 0px;
   }
   footer p {
-    padding: 2vh 0 20vh 0;
+    padding: 2vh 0 5vh 0;
     margin: 0px;
   }
   #insta {
@@ -2273,7 +2275,7 @@ button:hover {
     opacity: 1;
   }
   #skills {
-    min-height: 460px;
+    min-height: 640px;
     position: relative;
   }
   #skills H2 {
@@ -2671,7 +2673,6 @@ button:hover {
         grid-template-columns: 1fr 1fr;
   }
   #skills {
-    min-height: 440px;
     position: relative;
   }
   #skills H2 {
