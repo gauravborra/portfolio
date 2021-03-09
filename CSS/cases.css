@@ -105,4 +105,22 @@ html, body, div, iframe {
   z-index: 99999;
   bottom: 0px;
 }
+
+@media (min-width: 1025px) {
+  .hidden-l {
+    display: none;
+  }
+  .hidden-m {
+    display: block;
+  }
+}
+
+@media (max-width: 1024px) {
+  .hidden-m {
+    display: none;
+  }
+  .hidden-l {
+    display: block;
+  }
+}
 /*# sourceMappingURL=cases.css.map */
