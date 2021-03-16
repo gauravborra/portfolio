@@ -156,5 +156,8 @@ a:hover svg {
   .nextwork {
     margin: 2vh 2vh;
   }
+  #logofixed {
+    display: none;
+  }
 }
 /*# sourceMappingURL=cases.css.map */

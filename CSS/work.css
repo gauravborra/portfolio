@@ -303,12 +303,11 @@
     height: 8vh;
     width: auto;
     right: 1.6vh;
-    top: 400px;
+    -webkit-transform: translateY(-50px);
+            transform: translateY(-50px);
     border-radius: 10%;
     -webkit-box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
             box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
-    -webkit-transform: translateZ(50px);
-            transform: translateZ(50px);
   }
   #work-grid .work .meta {
     display: block;
