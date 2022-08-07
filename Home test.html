@@ -20,8 +20,7 @@
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
   </head>
-  <body>
-  
+  <body class="preload">
 
    <div id="preload" aria-hidden="false">
     <div id="introtext">
@@ -944,7 +943,14 @@ document.addEventListener('mousemove', ({x, y}) => {
 
 
 
-
+<script>
+  var body=document.body;
+  window.addEventListener('load',function(){
+  const preload = document.getElementById('preload');
+  preload.classList.add('preload-end'); 
+  body.classList.remove('preload');
+});
+</script>
 
 
     <!-- <script src="/JS/mousemoveparallax.js"></script> -->

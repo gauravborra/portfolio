@@ -14,11 +14,12 @@
 body {
     background-color: #fff;     
   }
+
   .preload{
-    animation: scrollhide 1s linear 1 forwards;
+    animation: scrollhide 5s linear 1 forwards;
   }
   
-  .preload-end{
+  .preload-end{ 
     opacity: 0;
     transition: opacity 1s;
   }
@@ -47,7 +48,7 @@ body {
     overflow: hidden;
     text-align: center;
     opacity: 1;
-    animation: preloader 1s linear 1 forwards ;
+    // animation: preloader 1s linear 1 forwards ;
    
     #introtext{
     position: absolute;
@@ -114,8 +115,8 @@ body {
     
     }
     .preload-end{
-    opacity: 0;
-    pointer-events: none;
+    opacity: 0 !important; 
+    // pointer-events: none;
     }
     
     

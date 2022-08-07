@@ -3,8 +3,8 @@ body {
 }
 
 .preload {
-  -webkit-animation: scrollhide 1s linear 1 forwards;
-          animation: scrollhide 1s linear 1 forwards;
+  -webkit-animation: scrollhide 5s linear 1 forwards;
+          animation: scrollhide 5s linear 1 forwards;
 }
 
 .preload-end {
@@ -47,8 +47,6 @@ body {
   overflow: hidden;
   text-align: center;
   opacity: 1;
-  -webkit-animation: preloader 1s linear 1 forwards;
-          animation: preloader 1s linear 1 forwards;
 }
 
 #preload #introtext {
@@ -153,8 +151,7 @@ body {
 }
 
 .preload-end {
-  opacity: 0;
-  pointer-events: none;
+  opacity: 0 !important;
 }
 
 @-webkit-keyframes preloader {
