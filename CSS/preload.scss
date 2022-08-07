@@ -22,6 +22,7 @@ body {
   .preload-end{ 
     opacity: 0;
     transition: opacity 1s;
+    pointer-events: none;
   }
 
   
