@@ -1,5 +1,5 @@
 body {
-  background-color: #fff;
+  background-color: --bac;
 }
 
 .preload {
@@ -36,6 +36,15 @@ body {
   100% {
     overflow: visible;
   }
+}
+
+#preload-test {
+  background-color: red;
+  background-image: url(https://www.google.com/imgres?imgurl=https%3A%2F%2Fcdn.dribbble.com%2Fusers%2F830587%2Fscreenshots%2F4381223%2Floader_gif.gif&imgrefurl=https%3A%2F%2Fdribbble.com%2Fshots%2F4381223-Loader-Gif&tbnid=T78z39aiDBOn0M&vet=12ahUKEwjF4IaK4fH5AhXhzqACHfPKCf4QMygIegUIARClAg..i&docid=Btbmn1fAx7hxMM&w=800&h=600&q=loader%20gif&ved=2ahUKEwjF4IaK4fH5AhXhzqACHfPKCf4QMygIegUIARClAg);
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  position: absolute;
 }
 
 #preload {
